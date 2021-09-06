@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import UnalCanvas from "./js/Components/UnalTemplate/UnalCanvas";
-import Home from "./js/Components/Home/Home";
-import Test from "./js/Components/Test/Test";
-import Login from "./js/Components/Login/Login";
+import UnalCanvas from "./Components/UnalTemplate/UnalCanvas";
+import Home from "./Components/Home/Home";
+import Test from "./Components/Test/Test";
+import Login from "./Components/Login/Login";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import "./css/index.css";
+import "./assets/css/index.css";
 import { isLogged } from "./Auth.js";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-import { Profile } from "./js/Components/Profile/Profile";
+import { Profile } from "./Components/Profile/Profile";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -33,7 +33,6 @@ const PublicRoute = ({ component: Component, ...rest }) => (
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter basename={"/aesci"}>
-      <UnalCanvas>
         <Switch>
           <PrivateRoute exact path="/home" component={Test} />
           <PublicRoute exact path="/" component={Home} />
@@ -54,7 +53,6 @@ ReactDOM.render(
             render={(props) => <Profile {...props} role="professor" />}
           />
         </Switch>
-      </UnalCanvas>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
