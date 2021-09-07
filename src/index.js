@@ -1,61 +1,75 @@
+// Core
 import React from "react";
 import ReactDOM from "react-dom";
-import UnalCanvas from "./Components/UnalTemplate/UnalCanvas";
-import Home from "./Components/Home/Home";
-import Test from "./Components/Test/Test";
-import Login from "./Components/Login/Login";
+import {BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
+//Redux
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import "./assets/css/index.css";
-import { isLogged } from "./Auth.js";
-import { Provider } from "react-redux";
-import { store } from "./store/store";
-import { Profile } from "./Components/Profile/Profile";
+import {Provider} from "react-redux";
+import {store} from "./store/store";
+// Components
+import Test from "./Components/Test/Test";
+//Auth - NOTE: someday this will be part of redux
+import {Profile} from "./Components/Profile/Profile";
+import {isLogged} from "./Auth.js";
+//Layouts
+import Header from "./layouts/Header/Header";
+import Footer from "./layouts/Footer/Footer";
+import AsideNavServices from "./layouts/AsideNav/AsideNavServices";
+import Breadcrumb from "./layouts/Breadcrumb/Breadcrumb";
+//Routes
+import {publicRoutes} from "./router/routes";
+//Styles
+import './styles/styles.scss';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      isLogged() ? <Component {...props} /> : <Redirect to="/" />
-    }
-  />
+
+const PrivateRoute = ({component: Component, ...rest}) => (
+    <Route
+        {...rest}
+        render={(props) =>
+            isLogged() ? <Component {...props} /> : <Redirect to="/"/>
+        }
+    />
 );
 
-const PublicRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      !isLogged() ? <Component {...props} /> : <Redirect to="/home" />
-    }
-  />
+const PublicRoute = ({component: Component, ...rest}) => (
+    <Route
+        {...rest}
+        render={(props) =>
+            !isLogged() ? <Component {...props} /> : <Redirect to="/home"/>
+        }
+    />
 );
 
 ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter basename={"/aesci"}>
-        <Switch>
-          <PrivateRoute exact path="/home" component={Test} />
-          <PublicRoute exact path="/" component={Home} />
-          <PublicRoute exact path="/login" component={Login} />
-          <Route
-            exact
-            path="/profile/student"
-            render={(props) => <Profile {...props} role="student" />}
-          />
-          <Route
-            exact
-            path="/profile/student"
-            render={(props) => <Profile {...props} role="student" />}
-          />
-          <Route
-            exact
-            path="/profile/professor"
-            render={(props) => <Profile {...props} role="professor" />}
-          />
-        </Switch>
-    </BrowserRouter>
-  </Provider>,
-  document.getElementById("root")
+    <Provider store={store}>
+        <BrowserRouter basename={"/aesci"}>
+            <div className="App">
+                <Header/>
+                <AsideNavServices/>
+                <main>
+                    <Breadcrumb/>
+                    <Switch>
+                        {publicRoutes.map(({path, Component}, i) => (
+                            <PublicRoute exact path={path} key={i} component={Component}/>
+                        ))}
+                        {/*<PrivateRoute exact path="/home" component={Test}/>*/}
+                        <Route
+                            exact
+                            path="/profile/student"
+                            render={(props) => <Profile {...props} role="student"/>}
+                        />
+                        <Route
+                            exact
+                            path="/profile/professor"
+                            render={(props) => <Profile {...props} role="professor"/>}
+                        />
+                    </Switch>
+                </main>
+                <Footer/>
+            </div>
+        </BrowserRouter>
+    </Provider>,
+    document.getElementById("root")
 );
 
 serviceWorker.unregister();

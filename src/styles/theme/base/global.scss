@@ -1,0 +1,138 @@
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+html {
+
+  &.theme{
+    &--1{
+      --gris-header: #2A044A;
+    }
+    &--2{
+      --gris-header: #0B2E59;
+    }
+    &--3{
+      --gris-header: #0D6759;
+    }
+  }
+
+  &.colors{
+    &--invert{
+      filter: invert(100%);
+    }
+  }
+
+  &.font-size {
+    &--0 {
+      font-size: calc(100% + (0% * 5));
+    }
+
+    &--1 {
+      font-size: calc(100% + (1% * 5));
+    }
+
+    &--2 {
+      font-size: calc(100% + (2% * 5));
+    }
+
+    &--3 {
+      font-size: calc(100% + (3% * 5));
+    }
+
+    &--4 {
+      font-size: calc(100% + (4% * 5));
+    }
+
+    &--5 {
+      font-size: calc(100% + (5% * 5));
+    }
+
+    &--6 {
+      font-size: calc(100% + (6% * 5));
+    }
+
+    &--7 {
+      font-size: calc(100% + (7% * 5));
+    }
+
+    &--8 {
+      font-size: calc(100% + (8% * 5));
+    }
+
+    &--9 {
+      font-size: calc(100% + (9% * 5));
+    }
+
+    &--10 {
+      font-size: calc(100% + (10% * 5));
+    }
+  }
+
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ancizar sans", Tahoma, Geneva, sans-serif;
+}
+
+main{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    padding: 100px 0;
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.print {
+  display: block;
+
+  &--notPrintable {
+    @media print {
+      display: none !important;
+    }
+  }
+
+  &--onlyOnPrint {
+    display: none;
+
+    @media print {
+      display: block;
+    }
+  }
+
+  &--onPrint {
+    @media print {
+      display: block;
+    }
+  }
+}
