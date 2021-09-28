@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Switch,
+  useHistory,
+  useRouteMatch,
+} from "react-router-dom";
 import sIcon1 from "../../../assets/images/menuSt1.png";
 import sIcon2 from "../../../assets/images/menuSt2.png";
 import sIcon3 from "../../../assets/images/menuSt3.png";
@@ -16,64 +23,68 @@ export const StudentProfile = () => {
     { title: `Assess"Póster de Diseño de Procesos Químicos y Bioquímicos"` },
   ];
 
-  let history = useHistory();
+  const { url, path } = useRouteMatch();
 
   return (
     <React.Fragment>
-      <div className="col title">Menu</div>
-      <div className="custom-container">
-        <div className="custom-content">
-          <div className="custom-img-container-student">
-            <img
-              src={sIcon1}
-              className="custom-img-student"
-              alt="Review Student Outcomes Assessment"
-            />
+      <Switch>
+        <Route exact path={path}>
+          <div className="col title">Menu</div>
+          <div className="custom-container">
+            <div className="custom-content">
+              <div className="custom-img-container-student">
+                <img
+                  src={sIcon1}
+                  className="custom-img-student"
+                  alt="Review Student Outcomes Assessment"
+                />
+              </div>
+              <span>
+                <Link to={`${url}/`}>
+                  Review Student
+                  <br />
+                  Outcomes Assessment
+                </Link>
+              </span>
+            </div>
+            <div className="custom-content">
+              <div className="custom-img-container-student">
+                <img
+                  src={sIcon2}
+                  className="custom-img-student"
+                  alt="Add submission of courses"
+                />
+              </div>
+              <span>
+                <Link to={`${url}/submissions`}>
+                  Add submission of
+                  <br />
+                  courses
+                </Link>
+              </span>
+            </div>
+            <div className="custom-content">
+              <div className="custom-img-container-student">
+                <img
+                  src={sIcon3}
+                  className="custom-img-student"
+                  alt="Asses another student"
+                />
+              </div>
+              <span>
+                <Link to={`${url}/`}>
+                  Asses another
+                  <br />
+                  student
+                </Link>
+              </span>
+            </div>
           </div>
-          <span>
-            Review Student
-            <br />
-            Outcomes Assessment
-          </span>
-        </div>
-        <div className="custom-content">
-          <div className="custom-img-container-student">
-            <img
-              src={sIcon2}
-              className="custom-img-student"
-              alt="Add submission of courses"
-            />
-          </div>
-          <span>
-            Add submission of
-            <br />
-            courses
-          </span>
-        </div>
-        <div className="custom-content">
-          <div className="custom-img-container-student">
-            <img
-              src={sIcon3}
-              className="custom-img-student"
-              alt="Asses another student"
-            />
-          </div>
-          <span>
-            Asses another
-            <br />
-            student
-          </span>
-        </div>
-      </div>
-      <MainTemplate title="Add submission of courses">
-        <Homeworks listHomeworks={homeworks} />
-      </MainTemplate>
-
-      <MainTemplate
-        title={`Add "Ensayo de Diseño de Procesos Químicos y Bioquímicos`}
-      >
-        <HomeworksDetail homework={homeworks} />
-      </MainTemplate>
+        </Route>
+        <Route path={`${url}/submissions`}>
+          <Homeworks listHomeworks={homeworks} />
+        </Route>
+      </Switch>
     </React.Fragment>
   );
 };

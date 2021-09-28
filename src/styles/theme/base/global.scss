@@ -8,21 +8,20 @@
 }
 
 html {
-
-  &.theme{
-    &--1{
-      --gris-header: #2A044A;
+  &.theme {
+    &--1 {
+      --gris-header: #2a044a;
     }
-    &--2{
-      --gris-header: #0B2E59;
+    &--2 {
+      --gris-header: #0b2e59;
     }
-    &--3{
-      --gris-header: #0D6759;
+    &--3 {
+      --gris-header: #0d6759;
     }
   }
 
-  &.colors{
-    &--invert{
+  &.colors {
+    &--invert {
       filter: invert(100%);
     }
   }
@@ -72,7 +71,6 @@ html {
       font-size: calc(100% + (10% * 5));
     }
   }
-
 }
 
 *,
@@ -85,14 +83,14 @@ body {
   font-family: "Ancizar sans", Tahoma, Geneva, sans-serif;
 }
 
-main{
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    height: 100%;
-    padding: 100px 0;
-    display: grid;
-    grid-gap: 1.5rem;
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  padding: 50px 0;
+  display: grid;
+  grid-gap: 1.5rem;
 }
 
 a {
