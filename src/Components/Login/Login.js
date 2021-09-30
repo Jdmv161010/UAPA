@@ -32,9 +32,13 @@ export function Login(props) {
   };
 
   return (
-    <div>
+    
+    
+    <div className="cont"> 
+      
+      <div className="cont0">
         <div className="col">
-          <div className="col title">Log in</div>
+          <div className="col titleLogin">Log in</div>
           <Button
             type="link"
             shape="circle"
@@ -54,6 +58,10 @@ export function Login(props) {
           />
         </div>
 
+      </div>
+      
+      <div className="cont2">
+        
         <div className="col">
           <div
             className="row"
@@ -126,7 +134,9 @@ export function Login(props) {
               </Form>
             </div>
           </div>
+      
         </div>
+      </div>                
     </div>
   );
 };
