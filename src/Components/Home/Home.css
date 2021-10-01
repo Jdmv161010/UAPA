@@ -1,13 +1,21 @@
+.contHome{
+    background-color:white;
+}
+
+
 .title, .home-subtitle, .home-content, .lateral-button, .login-button{
+    
     border-radius: 10px;
     padding: 0.5em;
     margin: 10px;
+    
 }
 
 .title, .home-subtitle, .lateral-button, .login-button{
     text-align: center;
     align-items: center;
     justify-content: center;
+    
 }
 
 .title, .home-subtitle, .login-button{
@@ -73,4 +81,9 @@
 
 .search-input{
     border-radius: 8px;
+}
+
+.row{
+    display: flex;
+    ;
 }

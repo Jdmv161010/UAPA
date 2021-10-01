@@ -18,7 +18,7 @@ export const ProfessorProfile = () => {
             <img src={pIcon1} alt="Student Outcomes Assessment" />
           </div>
           <span>
-            Studen Outcomes
+            Student Outcomes
             <br />
             Assessment
           </span>
@@ -50,22 +50,22 @@ export const ProfessorProfile = () => {
           <span>Monitoring Action Plan</span>
         </div>
       </div>
-      <div className="col title">Self Assessment Results</div>
+      <div className="col title">Edit</div>
       <div className="custom-container">
         <div className="custom-content">
           <div className="custom-img-container">
-            <img src={pIcon5} alt="Studen Outcomes Assessment" />
+            <img src={pIcon5} alt="Student Outcomes Assessment" />
           </div>
-          <span>Course Development</span>
+          <span>Assign task to students</span>
         </div>
         <div className="custom-content">
           <div className="custom-img-container">
             <img src={pIcon6} alt="Studen Outcomes Assessment" />
           </div>
           <span>
-            Interaction with the
+            Fulfill Self-Assesment
             <br />
-            students
+            of course
           </span>
         </div>
         <div className="custom-content">
@@ -73,9 +73,19 @@ export const ProfessorProfile = () => {
             <img src={pIcon7} alt="Studen Outcomes Assessment" />
           </div>
           <span>
-            Interactions with colleagues
+            Edit Continuous
             <br />
-            and research development
+            Improvement Process
+          </span>
+        </div>
+        <div className="custom-content">
+          <div className="custom-img-container">
+            <img src={pIcon7} alt="Studen Outcomes Assessment" />
+          </div>
+          <span>
+            Edit Monitoring
+            <br />
+            Action Plan
           </span>
         </div>
       </div>
