@@ -26,8 +26,7 @@ function Header() {
 
     const languages = [
         {acronym: "EN", name: "EN - English"},
-        {acronym: "GUC", name: "GUC - Wayuunaiki"},
-        {acronym: "PBB", name: "PBB - Nasa yuwe"},
+        {acronym: "ES", name: "ES - Español"},
     ]
     const [language, setLanguage] = useState(languages[0]);
     const [menuMobileDisplay, setMenuMobileDisplay] = useState(false);
@@ -197,7 +196,7 @@ function Header() {
                 <div className="Header-navDesktop__wrapper-mainNav">
                     <div className="Header-navDesktop__title-wrapper">
                         <span className="Header-navDesktop__title-icon"><img src={locationIcon} alt=""/></span>
-                        <h1 className="Header-navDesktop__title">subdominio.unal.edu.co</h1>
+                        <h1 className="Header-navDesktop__title">ingenieria.bogota.unal.edu.co/AESCI</h1>
                     </div>
                     <ul className="Header-navDesktop-menu">
                         <li className="Header-dropdown">

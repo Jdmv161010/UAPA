@@ -5,7 +5,7 @@ import jwtDecode from "jwt-decode";
 
 const apiClient = axios.create();
 
-const BASE_AUTH_URL = "http://127.0.0.1:8000/api/token/";// <--- Cambiarla por el path de user-ms
+const BASE_AUTH_URL = "http://127.0.0.1:8000/api/token/";
 const refreshEndpoint = BASE_AUTH_URL + "refresh/";
 const verifyEndpoint = BASE_AUTH_URL + "verify/";
 
