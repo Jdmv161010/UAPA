@@ -57,7 +57,7 @@ ReactDOM.render(
               render={(props) => <Profile {...props} role="student" />}
             />
             <Route
-              exact
+              
               path="/profile/professor"
               render={(props) => <Profile {...props} role="professor" />}
             />

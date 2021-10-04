@@ -80,58 +80,62 @@ export default function Home() {
     return (
         <div className="contHome">
             <div className="cont1">
-                
                     <div className="col element title">
                         Academic Evaluation System for Continuous Improvement
                     </div>
                 
             </div>
-            <section>
-                <div className="row">
-                    <div className="col-3 trim">
-                        <div
-                            className="row login-button"
-                            onClick={() => history.push("/login")}
-                        >
-                            Login
-                        </div>
-                        {/* <div className="row search-container">
-                <Search
-                    className="search-input"
-                    placeholder="Search"
-                    size="large"
-                    onSearch={(value) => console.log(value)}
-                />
-                </div> */}
-                        <div
-                            className="row lateral-button"
-                            onClick={() => setUser({selected: 1})}
-                        >
-                            Program Educational Objectives
-                        </div>
-                        <div
-                            className="row lateral-button"
-                            onClick={() => setUser({selected: 2})}
-                        >
-                            Student Outcomes
-                        </div>
-                        <div
-                            className="row lateral-button"
-                            onClick={() => setUser({selected: 3})}
-                        >
-                            Relation Among Student Outcomes and Courses
-                        </div>
+            
+            <div className="contBotones">
+                    
+                <div className="contCuadro">
+                    <div
+                        className="row login-button"
+                        onClick={() => history.push("/login")}
+                    >
+                        Login
                     </div>
-                    <div className="col trim">
-                        <div className="row home-subtitle">
-                            Program Educational Objectives
-                        </div>
-                        <div className="row home-content">{getContent(user.selected)}</div>
+                    {/* <div className="row search-container">
+                    <Search
+                        className="search-input"
+                        placeholder="Search"
+                        size="large"
+                        onSearch={(value) => console.log(value)}
+                    />
+                    </div> */}
+                    <div
+                        className="row lateral-button"
+                        onClick={() => setUser({selected: 1})}
+                    >
+                        Program Educational Objectives
+                    </div>
+                    <div
+                        className="row lateral-button"
+                        onClick={() => setUser({selected: 2})}
+                    >
+                        Student Outcomes
+                    </div>
+                    <div
+                        className="row lateral-button"
+                        onClick={() => setUser({selected: 3})}
+                    >
+                        Relation Among Student Outcomes and Courses
                     </div>
                 </div>
                 
-            </section>
+                <div className="contCarrusel">
+                        
+                            <div className="row home-subtitle">
+                                Program Educational Objectives
+                            </div>
+                            <div className="row home-content">{getContent(user.selected)}</div>
+                        
+                </div>
+            </div>
+            
+                
+            
     
-    </div>
+        </div>
     );
 }
