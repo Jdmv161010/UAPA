@@ -90,12 +90,12 @@
     flex-direction: column;
     border-radius: 0 0 10px 10px;
     margin: 20px;
-    padding: 0.7em 1.3em 0em;
+    
     align-items: center;
     justify-content: center;
     background-color: #bfbfbf;
     color: black;
-    font-size: 1.4em;
+    font-size: 0.8em !important;
     height: 250px;
     width: 400px;
     
