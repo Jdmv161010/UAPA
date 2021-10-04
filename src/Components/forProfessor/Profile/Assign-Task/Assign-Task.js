@@ -43,16 +43,26 @@ export default function AssignTask() {
                     <div className="Course">
                     Deadline
                     </div>
-                    <div className="Design">
-                    Date & hour
+                    <div className="CourseA">
+                    Date 
+                    </div>
+                    <div className="DesignB">
+                    30/04/2020
+                    </div>
+                    <div className="CourseA">
+                    Hour
+                    </div>
+                    <div className="DesignB">
+                    9:00 PM
                     </div>
                 </div>
-                <div className="firstC">
-                    <div className="Course">
+                <div className="firstB">
+                    <div className="CourseTask">
                     Task description
                     </div>
-                    <div className="Design">
-                    Dear students...
+                    <div className="DesignTask">
+                    Dear students
+                    According to the reading of the book "seeds of deception" by jeffrey M. Smith, write an essay in English no longer than 5 pages.
                     </div>
                 </div>
                 <div className="firstC">

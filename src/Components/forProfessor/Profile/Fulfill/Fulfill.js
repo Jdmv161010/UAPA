@@ -1,32 +1,57 @@
 import React from "react";
+import "./Fulfill.css";
 
 
 export default function Fulfill() {
     
   return (
-        <div className="contGrande">
+        <div className="contFulfill">
             
-            <div className="cont1">
+            <div className="">
                 <div className="col element title">
                     Fulfill Self-Assesment of house
-                </div>   
-                <div>
-                </div> 
-                
-                
+                </div>     
             </div>
-                
-            <div className="cont2">
-                        
+            
+            <div className="contAssign2">
+                <div className="firstC">
+                    <div className="Course">
+                    Course
+                    </div>
+                    <div className="Design">
+                    Select the course
+                    </div>
+                </div>
+                <div className="firstC">
+                    <div className="Course">
+                    Semester in the Curriculum
+                    </div>
+                    <div className="Design">
+                    Select the semester
+                    </div>
+                </div>
+                <div className="firstC">
+                    <div className="Course">
+                    Number of Students
+                    </div>
+                    <div className="Design">
+                    Write the number of the students in the course
+                    </div>
+                </div>
+
+            </div>
+            <div className="ContFullFill2">
                 <div className="col element title">
                     Course Development
                 </div>
                 
-                        
-            </div>
-        </div>
-            
                 
+                </div>     
+            </div>
+                
+        
+        
+        
             
     
         
