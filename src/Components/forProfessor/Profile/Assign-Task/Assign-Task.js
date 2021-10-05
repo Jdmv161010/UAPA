@@ -61,7 +61,8 @@ export default function AssignTask() {
                     Task description
                     </div>
                     <div className="DesignTask">
-                    Dear students
+                    Dear students...
+                    <br />
                     According to the reading of the book "seeds of deception" by jeffrey M. Smith, write an essay in English no longer than 5 pages.
                     </div>
                 </div>
