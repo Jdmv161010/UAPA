@@ -8,6 +8,9 @@ import {
 } from "@ant-design/icons";
 import { Form, Input, Button, Modal } from "antd";
 import "./Login.css";
+import { StartAuthLogin } from "../../store/actions/authActions";
+import { useSelector } from "react-redux";
+
 
 export function Login(props) {
   const initialState = {
@@ -17,6 +20,7 @@ export function Login(props) {
 
   const history = useHistory();
   const dispatch = useDispatch();
+  const {access, role} = useSelector(state => state.auth.responseLogin)
   const [state, setState] = useState(initialState);
 
   const onFinishFailed = (errorInfo) => {
@@ -28,7 +32,14 @@ export function Login(props) {
   };
 
   const handleLogin = (e) => {
-    history.push("/profile/student");
+    dispatch(StartAuthLogin(state.username, state.password))
+    if(access){
+      if(!role=="Admin"){
+        history.push("/profile/professor");
+      }
+      else{history.push("/profile/student");}
+    } 
+
   };
 
   return (
