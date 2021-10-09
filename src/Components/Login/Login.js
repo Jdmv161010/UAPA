@@ -23,9 +23,9 @@ export function Login(props) {
     console.log("Failed:", errorInfo);
   };
 
-  const handleReturn = () => {
-    history.push("/");
-  };
+  // const handleReturn = () => {
+  //   history.push("/");
+  // };
 
   const handleLogin = (e) => {
     history.push("/profile/student");
@@ -39,7 +39,7 @@ export function Login(props) {
       <div className="cont0">
         <div className="col">
           <div className="col titleLogin">Log in</div>
-          <Button
+          {/* <Button
             type="link"
             shape="circle"
             style={{
@@ -55,7 +55,7 @@ export function Login(props) {
             }
             size="large"
             onClick={handleReturn}
-          />
+          /> */}
         </div>
 
       </div>

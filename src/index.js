@@ -35,6 +35,7 @@ const PublicRoute = ({ component: Component, ...rest }) => (
     {...rest}
     render={(props) =>
       !isLogged() ? <Component {...props} /> : <Redirect to="/home" />
+      
     }
   />
 );

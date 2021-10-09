@@ -17,6 +17,9 @@ export default function Breadcrumb(props) {
                 key + 1 === crumbs.length ?
                     (<span className={"Breadcrumb__item"} key={key}>{name}</span>) :
                     (<Link className={"Breadcrumb__link"}  key={key} to={path}>{name}</Link>)
+                    
+
+
             )}
         </div>
     );
