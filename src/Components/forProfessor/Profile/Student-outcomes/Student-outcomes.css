@@ -1,0 +1,110 @@
+.contAssign{
+    background-color:rgb(196, 196, 196);
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    margin: 15px;
+}
+
+.contAssign2{
+    
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    
+    
+    
+}
+
+.firstC{
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    font-size: 1.5em;
+    
+    
+    
+    margin: 10px;
+    justify-content: space-between;
+    
+}
+
+.firstB{
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    height: 110px;
+    font-size: 1.5em;
+    
+    
+    
+    margin: 10px;
+    justify-content: space-between;
+    
+}
+
+.Course{
+    background-color: #8ca2d3;
+    width: 380px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height: 50px;
+    color: white;
+
+}
+
+.Design{
+    background-color: white;
+    width: 900px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height: 50px;
+}
+
+.CourseTask{
+    background-color: #8ca2d3;
+    width: 180px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height: 100px;
+    color: white;
+
+}
+
+.DesignTask{
+    background-color: white;
+    width: 1300px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height:100px;
+}
+
+.CourseA{
+    background-color: #8ca2d3;
+    width: 200px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height: 50px;
+    color: white;
+
+}
+
+.DesignB{
+    background-color: white;
+    width: 200px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height: 50px;
+}

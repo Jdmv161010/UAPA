@@ -15,18 +15,14 @@ import {
   useHistory,
   useRouteMatch,
 } from "react-router-dom";
-import { Assessments } from "./Self-Assessment Results Report/Self-Assessment";
+import { Assessments } from "./Self-Assessment/Self-Assessment";
 import Fulfill from "./Fulfill/Fulfill";
 import AssignTask from "./Assign-Task/Assign-Task";
+import StudentOutcomes from "./Student-outcomes/Student-outcomes";
 
 
 export const ProfessorProfile = () => {
-// const homeworks = [
-//    { title: `Add "Ensayo de Diseño de Procesos Químicos y Bioquímicos"` },
-//    { title: `Assess"Póster de Diseño de Procesos Químicos y Bioquímicos"` },
-//    { title: `Add "Ensayo de Diseño de Procesos Químicos y Bioquímicos"` },
-//    { title: `Assess"Póster de Diseño de Procesos Químicos y Bioquímicos"` },
-//  ];
+
 
   const { url, path } = useRouteMatch();
 
@@ -44,7 +40,7 @@ export const ProfessorProfile = () => {
                   alt="Student Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                <Link to={`${url}/StuOut`}>
                 Student Outcomes
                 <br />
                 Assessment
@@ -151,6 +147,9 @@ export const ProfessorProfile = () => {
             </div>
           </div>
         </Route>
+        <Route path={`${url}/StuOut`}>
+          <StudentOutcomes  />
+        </Route>
         <Route path={`${url}/self`}>
           <Assessments  />
         </Route>
@@ -160,6 +159,7 @@ export const ProfessorProfile = () => {
         <Route path={`${url}/Assign`}>
           <AssignTask  />
         </Route>
+
       </Switch>
     </React.Fragment>
   );

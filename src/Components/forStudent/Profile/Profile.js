@@ -14,6 +14,7 @@ import { MainTemplate } from "../../Utils/MainTemplate/MainTemplate";
 import { Homeworks } from "../Homeworks/Homeworks";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./StudentProfile.css";
+// import App from "../../../App";
 
 export const StudentProfile = () => {
   const homeworks = [
@@ -27,6 +28,7 @@ export const StudentProfile = () => {
 
   return (
     <React.Fragment>
+      
       <Switch>
         <Route exact path={path}>
           <div className="col title">Menu</div>

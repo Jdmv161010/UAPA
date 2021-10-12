@@ -15,7 +15,7 @@ import { isLogged } from "./Auth.js";
 import Header from "./layouts/Header/Header";
 import Footer from "./layouts/Footer/Footer";
 import AsideNavServices from "./layouts/AsideNav/AsideNavServices";
-import Breadcrumb from "./layouts/Breadcrumb/Breadcrumb";
+import BreadCrumb from "./layouts/Breadcrumbper/Breadcrumb";
 //Routes
 import { publicRoutes } from "./router/routes";
 //Styles
@@ -47,7 +47,7 @@ ReactDOM.render(
         <Header />
         <AsideNavServices />
         <main>
-          <Breadcrumb />
+          <BreadCrumb /> 
           <Switch>
             {publicRoutes.map(({ path, Component }, i) => (
               <PublicRoute exact path={path} key={i} component={Component} />
