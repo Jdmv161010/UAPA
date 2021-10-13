@@ -2,9 +2,10 @@
     background-color:rgb(196, 196, 196);
     align-items: center;
     text-align: center;
-    height: 100%;
-    justify-content: center;
+    height: 1200px;
     margin: 15px;
+    
+
 }
 
 .contAssign2{
@@ -49,6 +50,21 @@
     
 }
 
+.firstB1{
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    height: 110px;
+    font-size: 1.5em;
+    height:400px;
+    margin: 10px;
+    justify-content: space-between;
+    
+}
+
+
+
+
 .Course{
     background-color: #8ca2d3;
     width: 380px;
@@ -87,7 +103,29 @@
     padding: 0.5em; 
     margin: 10px;
     height:100px;
+    text-align: left;
 }
+
+.DesignTask1{
+    background-color: white;
+    width: 1300px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    
+    text-align: left;
+}
+
+.DesignTask2{
+    background-color: white;
+    width: 1300px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height:240px;
+    text-align: center;
+}
+
 
 .CourseA{
     background-color: #8ca2d3;
