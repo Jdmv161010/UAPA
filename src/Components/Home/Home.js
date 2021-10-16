@@ -1,6 +1,7 @@
 import Item from "antd/lib/list/Item";
 import React, {useState} from "react";
 import {useHistory} from "react-router-dom";
+import "animate.css";
 
 export default function Home() {
     const data = [
@@ -169,7 +170,7 @@ export default function Home() {
                     
                 <div className="contCuadro">
                     <div
-                        className="row login-button"
+                        className=" login-button"
                         onClick={() => history.push("/login")}
                     >
                         Login

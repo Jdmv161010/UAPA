@@ -8,6 +8,8 @@
     
 }
 
+
+
 .titleLogin {
     display: flex;
     justify-content: center;
@@ -126,6 +128,8 @@
 
 .login-form-button:hover {
     background-color: #19284e;
+    transform: scale(1.08);
+    
 }
 
 .login-form-button:active {

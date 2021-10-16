@@ -3,9 +3,10 @@ import pIcon1 from "../../../assets/images/reviewPr1.png";
 import pIcon2 from "../../../assets/images/reviewPr2.png";
 import pIcon3 from "../../../assets/images/reviewPr3.png";
 import pIcon4 from "../../../assets/images/reviewPr4.png";
-import pIcon5 from "../../../assets/images/reviewPr5.png";
-import pIcon6 from "../../../assets/images/reviewPr6.png";
-import pIcon7 from "../../../assets/images/reviewPr7.png";
+import Edit1 from "../../../assets/images/Edit1.png";
+import Edit2 from "../../../assets/images/Edit2.png";
+import Edit3 from "../../../assets/images/Edit3.png";
+import Edit4 from "../../../assets/images/Edit4.png";
 import "./ProfessorProfile.css";
 import {
   BrowserRouter,
@@ -33,7 +34,7 @@ export const ProfessorProfile = () => {
           <div className="col title">Review</div>
           <div className="custom-container">
             <div className="custom-content">
-              <div className="custom-img-container-professor">
+              <div className="custom-img-container-professorDis">
                 <img 
                   src={pIcon1} 
                   className="custom-img-professor"
@@ -55,11 +56,11 @@ export const ProfessorProfile = () => {
                   alt="Self-Assessment Results Report" />
               </div>
               <span>
-                <Link to={`${url}/self`}>
+                {/* <Link to={`${url}/self`}> */}
                 Self-Assessment Results
                 <br />
                 Report
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
             <div className="custom-content">
@@ -69,11 +70,11 @@ export const ProfessorProfile = () => {
                 alt="Continuous Improvement Process" />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                {/* <Link to={`${url}/`}> */}
                 Continuous
                 <br />
                 Improvement Process
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
             <div className="custom-content">
@@ -83,17 +84,17 @@ export const ProfessorProfile = () => {
                 alt="Monitoring Action Plan" />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                {/* <Link to={`${url}/`}> */}
                 Monitoring Action Plan
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
           </div>
           <div className="col title">Edit</div>
           <div className="custom-container">
             <div className="custom-content">
-              <div className="custom-img-container-professor">
-                <img src={pIcon5} 
+              <div className="custom-img-container-professorDis">
+                <img src={Edit1} 
                 className="custom-img-Professor"
                 alt="Student Outcomes Assessment" />
               </div>
@@ -105,44 +106,44 @@ export const ProfessorProfile = () => {
             </div>
             <div className="custom-content">
               <div className="custom-img-container-professor">
-                <img src={pIcon6} 
+                <img src={Edit2} 
                 className="custom-img-Professor"
                 alt="Studen Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/Fulfill`}>
+                {/* <Link to={`${url}/Fulfill`}> */}
                 Fulfill Self-Assesment
                 <br />
                 of course
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
             <div className="custom-content">
               <div className="custom-img-container-professor">
-                <img src={pIcon7} 
+                <img src={Edit4} 
                 className="custom-img-Professor"
                 alt="Studen Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                {/* <Link to={`${url}/`}> */}
                 Edit Continuous
                 <br />
                 Improvement Process
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
             <div className="custom-content">
               <div className="custom-img-container-professor">
-                <img src={pIcon7} 
+                <img src={Edit3} 
                 className="custom-img-Professor"
                 alt="Studen Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                {/* <Link to={`${url}/`}> */}
                 Edit Monitoring
                 <br />
                 Action Plan
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
           </div>

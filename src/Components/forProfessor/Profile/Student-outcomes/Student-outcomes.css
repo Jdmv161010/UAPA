@@ -1,4 +1,4 @@
-.contAssign{
+.contStuOut{
     background-color:rgb(196, 196, 196);
     align-items: center;
     text-align: center;
@@ -56,7 +56,7 @@
     flex-direction: row;
     height: 110px;
     font-size: 1.5em;
-    height:400px;
+    height:500px;
     margin: 10px;
     justify-content: space-between;
     
@@ -146,3 +146,18 @@
     margin: 10px;
     height: 50px;
 }
+
+/* Dropdown */
+/* .Dropdown-container{
+    position: relative;
+}
+.details ol{
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition:all;
+}
+.details:hover ol{
+    max-height:480px
+} */
+

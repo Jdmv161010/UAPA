@@ -20,7 +20,15 @@ export default function AssignTask() {
                     Course
                     </div>
                     <div className="Design">
-                    Design of chemical and Biochemical processes
+                        
+                        <label for="Des"> </label> 
+                            <select nameclass="Des">
+                                <option disabled="">Design of chemical and Biochemical processes</option>
+                                <option value="Desuno">Design of chemical and Biochemical processes 1</option>
+                                <option value="Desdos">Design of chemical and Biochemical processes 2</option>
+                                
+                            </select>
+        
                     </div>
                 </div>
                 <div className="firstC">
@@ -28,8 +36,18 @@ export default function AssignTask() {
                     Student Outcome
                     </div>
                     <div className="Design">
-                    3.Ability to communicate effectively with a range of audiences
+                        
+                        <label for="StudentO"> </label> 
+                            <select nameclass="StudentO">
+                                <option disabled="">1.Ability to communicate effectively with a range of audiences</option>
+                                <option value="SO">2.Ability to communicate effectively with a range of audiences</option>
+                                <option value="SO">3.Ability to communicate effectively with a range of audiences</option>
+                                
+                            </select>
+        
                     </div>
+                    
+
                 </div>
                 <div className="firstC">
                     <div className="Course">
@@ -66,14 +84,7 @@ export default function AssignTask() {
                     According to the reading of the book "seeds of deception" by jeffrey M. Smith, write an essay in English no longer than 5 pages.
                     </div>
                 </div>
-                <div className="firstC">
-                    <div className="Course">
-                    Required file
-                    </div>
-                    <div className="Design">
-                    Pdf
-                    </div>
-                </div>
+                
                     
                 
             </div>

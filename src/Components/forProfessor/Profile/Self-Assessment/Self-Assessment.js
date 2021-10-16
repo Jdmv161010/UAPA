@@ -1,7 +1,7 @@
 import React from "react";
-import pIcon5 from "../../../../images/reviewPr5.png";
-import pIcon6 from "../../../../images/reviewPr6.png";
-import pIcon7 from "../../../../images/reviewPr7.png";
+import pIcon5 from "../../../../assets/images/reviewPr5.png";
+import pIcon6 from "../../../../assets/images/reviewPr6.png";
+import pIcon7 from "../../../../assets/images/reviewPr7.png";
 import "./Self-Assessment.css";
 import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
 //import { Card } from "../../Utils/Card/Card";

@@ -10,14 +10,14 @@ const AuthLogin = (data) => ({
 });
 
 export const StartAuthLogin = (username, password) => {
-  console.log(username, password)
+  
   return async (dispatch) => {
     try {
       const { data } = await Axios.post(`${UrlBase}/login/`, {
         username,
         password,
       });
-       console.log(data)
+       
        dispatch(AuthLogin(data));
     } catch (error) {
       console.log(error);

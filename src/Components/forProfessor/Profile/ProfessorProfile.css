@@ -7,6 +7,16 @@
 }
 
 .custom-img-container-professor {
+  background: gray;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-img-container-professorDis {
   background: #52ACAC;
   width: 200px;
   height: 200px;

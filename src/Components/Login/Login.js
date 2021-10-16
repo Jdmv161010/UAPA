@@ -12,6 +12,7 @@ import { StartAuthLogin } from "../../store/actions/authActions";
 import { useSelector } from "react-redux";
 
 
+
 export function Login(props) {
   const initialState = {
     username: "",
@@ -34,13 +35,18 @@ export function Login(props) {
   const handleLogin = (e) => {
     dispatch(StartAuthLogin(state.username, state.password))
     if(access){
-      if(!role=="Admin"){
+      if(role=="Admin"){  /*Cambiar por Professor */
         history.push("/profile/professor");
+      }else if (role=="Student"){
+        history.push("/profile/student");
+      }else{
+        //Aquí va el perfil del administrador
       }
-      else{history.push("/profile/student");}
-    } 
 
-  };
+  }
+};
+  
+
 
   return (
     

@@ -2,12 +2,13 @@
     background-color:rgb(196, 196, 196);
     align-items: center;
     text-align: center;
-    
+    width: 1200px;
+    height: 550px ;
     justify-content: center;
 }
 
 .contAssign2{
-    
+    /* background-color: red; */
     height: 500px;
     text-align: center;
     align-items: center;
