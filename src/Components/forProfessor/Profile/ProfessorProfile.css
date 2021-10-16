@@ -1,25 +1,37 @@
 .custom-container {
-  margin: 2% 0;
+  /* margin: 2% 0; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.custom-img-container {
-  width: 100%;
+.custom-img-container-professor {
+  background: gray;
+  width: 200px;
   height: 200px;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-img {
-  height: 73%;
+.custom-img-container-professorDis {
+  background: #52ACAC;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-img-professor {
+  height: 50%;
 }
 
 .custom-content {
-  background-color: #cad0dc;
+  background-color: #52ACAC;
   width: 23%;
   height: 300px;
   border-radius: 40px;

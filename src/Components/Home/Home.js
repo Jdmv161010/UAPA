@@ -1,45 +1,128 @@
+import Item from "antd/lib/list/Item";
 import React, {useState} from "react";
 import {useHistory} from "react-router-dom";
+import "animate.css";
 
 export default function Home() {
+    const data = [
+        {
+        index: 1,
+        texto1: (
+            <div>
+            The graduates of the <b>Program in Chemical Engineering</b> of the
+            Universidad Nacional de Colombia Bogotá Campus, will be integral
+            citizens and professionals who:
+            <br />
+            <br />
+            <ul style={{ listStyleType: "disc" }}>
+                <li>
+                Will develop their careers applying scientific, technological,
+                humanistic and administrative knowledge, with social
+                responsibility to positively influence society.
+                </li>
+                <li>
+                Will become leading professionals who design, operate, manage or
+                market products, processes or industrial facilities, incorporating
+                sustainability criteria.
+                <br />
+                Will be use their communication and team work skills developed as
+                well as their commitment to life-long learning to advance their
+                careers.
+                </li>
+                <li>
+                Will contribute to well-being of their communities through their
+                involvement in research, development and innovation projects.
+                </li>
+            </ul>
+            </div>
+        ),
+        },
+        {
+        index: 2,
+        texto1: (
+            <div>
+            Graduates of the <b>Electronic Engineering Program</b> of the
+            Universidad Nacional de Colombia, Bogotá, will be integral citizens
+            and professionals who:
+            <br />
+            <br />
+            <ul style={{ listStyleType: "disc" }}>
+                <li>
+                Will apply scientific, technological and administrative knowledge
+                in the conception, design and implementation of solutions to
+                Electronic Engineering problems considering social and
+                environmental sustainability criteria.
+                </li>
+                <li>
+                Contribute to the integral solution of engineering problems
+                through leadership and effective communication in
+                multidisciplinary teams.
+                </li>
+                <li>
+                Apply lifelong learning skills in the face of social, economic and
+                technological dynamics, recognizing the ethical responsibilities
+                of their professional practice.
+                </li>
+            </ul>
+            </div>
+        ),
+        },
+        {
+        index: 3,
+        texto1: (
+            <div>
+            Graduates of the <b>Electrical Engineering Program</b> at the National
+            University of Colombia, Bogotá campus, will be integral citizens and
+            professionals who:
+            <br />
+            <br />
+            <ul style={{ listStyleType: "disc" }}>
+                <li>
+                Will apply scientific, technological and administrative knowledge
+                in the conception, design and implementation of solutions to
+                Electrical Engineering problems considering social and
+                environmental sustainability criteria.
+                </li>
+                <li>
+                Contribute to the integral solution of engineering problems
+                through leadership and effective communication in
+                multidisciplinary teams.
+                </li>
+                <li>
+                Apply lifelong learning skills in the face of social, economic and
+                technological dynamics, recognizing the ethical responsibilities
+                of their professional practice.
+                </li>
+            </ul>
+            </div>
+        ),
+        },
+    ];
+    
+    const [carousel, setCarousel] = useState(data[0]);
+    
     const [user, setUser] = useState({
         username: "",
         password: "",
         selected: 1,
     });
     const history = useHistory();
+
+    const handleChangePrev = () => {
+        const index = data.findIndex((item) => item.index === carousel.index);
+        setCarousel(data[index === 0 ? data.length - 1 : index - 1]);
+      };
+    
+      const handleChangeNext = () => {
+        const index = data.findIndex((item) => item.index === carousel.index);
+        setCarousel(data[index === data.length - 1 ? 0 : index + 1]);
+      };
   
-    const getContent = (element) => {
+    const getContent = (element, item1) => {
         switch (element) {
             case 1:
-                return (
-                    <div>
-                        The graduates of the Program in Chemical Engineering of the
-                        Universidad Nacional de Colombia Bogotá Campus, will be integral
-                        citizens and professionals who:
-                        <br/>
-                        <ul style={{listStyleType: "disc"}}>
-                            <li>
-                                Will develop their careers applying scientific, technological,
-                                humanistic and administrative knowledge, with social
-                                responsibility to positively influence society.
-                            </li>
-                            <li>
-                                Will become leading professionals who design, operate, manage or
-                                market products, processes or industrial facilities, incorporating
-                                sustainability criteria.
-                                <br/>
-                                Will be use their communication and team work skills developed as
-                                well as their commitment to life-long learning to advance their
-                                careers.
-                            </li>
-                            <li>
-                                Will contribute to well-being of their communities through their
-                                involvement in research, development and innovation projects.
-                            </li>
-                        </ul>
-                    </div>
-                );
+                return item1;
+                    
             case 2:
                 return (
                     <div>
@@ -80,58 +163,82 @@ export default function Home() {
     return (
         <div className="contHome">
             <div className="cont1">
-                
                     <div className="col element title">
                         Academic Evaluation System for Continuous Improvement
                     </div>
                 
             </div>
-            <section>
-                <div className="row">
-                    <div className="col-3 trim">
-                        <div
-                            className="row login-button"
-                            onClick={() => history.push("/login")}
-                        >
-                            Login
-                        </div>
-                        {/* <div className="row search-container">
-                <Search
-                    className="search-input"
-                    placeholder="Search"
-                    size="large"
-                    onSearch={(value) => console.log(value)}
-                />
-                </div> */}
-                        <div
-                            className="row lateral-button"
-                            onClick={() => setUser({selected: 1})}
-                        >
-                            Program Educational Objectives
-                        </div>
-                        <div
-                            className="row lateral-button"
-                            onClick={() => setUser({selected: 2})}
-                        >
-                            Student Outcomes
-                        </div>
-                        <div
-                            className="row lateral-button"
-                            onClick={() => setUser({selected: 3})}
-                        >
-                            Relation Among Student Outcomes and Courses
-                        </div>
+            
+            <div className="contBotones">
+                    
+                <div className="contCuadro">
+                    <div
+                        className=" login-button"
+                        onClick={() => history.push("/login")}
+                    >
+                        Login
                     </div>
-                    <div className="col trim">
-                        <div className="row home-subtitle">
-                            Program Educational Objectives
-                        </div>
-                        <div className="row home-content">{getContent(user.selected)}</div>
+                    {/* <div className="row search-container">
+                    <Search
+                        className="search-input"
+                        placeholder="Search"
+                        size="large"
+                        onSearch={(value) => console.log(value)}
+                    />
+                    </div> */}
+                    <div
+                        className="row lateral-button"
+                        onClick={() => setUser({selected: 1})}
+                    >
+                        Program Educational
+                        <br />
+                        Objectives
+                    </div>
+                    <div
+                        className="row lateral-button"
+                        onClick={() => setUser({selected: 2})}
+                    >
+                        Student Outcomes
+                    </div>
+                    <div
+                        className="row lateral-button"
+                        onClick={() => setUser({selected: 3})}
+                    >
+                        Relation Among Student 
+                        <br />
+                        Outcomes and Courses
                     </div>
                 </div>
                 
-            </section>
+                <div className="contCarrusel">
+                        
+                    <div className="row home-subtitle">
+                        Program Educational Objectives
+                    </div>
+                    <div className="row home-content">
+                        {getContent(user.selected, carousel.texto1)}
+                        {user.selected === 1 && (
+                            <div className="custom-carousel-controls">
+                                <div className="button-prev">
+                                    <button type="buttton" onClick={handleChangePrev}>
+                                        Prev
+                                    </button>
+                                </div>
+                                <div className="button-prev">
+                                    <button type="buttton" onClick={handleChangeNext}>
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                        
+                </div>
+            </div>
+            
+                
+            
     
-    </div>
+        </div>
     );
 }

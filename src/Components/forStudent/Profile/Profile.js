@@ -7,32 +7,35 @@ import {
   useHistory,
   useRouteMatch,
 } from "react-router-dom";
-import sIcon1 from "../../../assets/images/menuSt1.png";
+import sIcon1 from "../../../assets/images/menuSt1-gray.png";
 import sIcon2 from "../../../assets/images/menuSt2.png";
-import sIcon3 from "../../../assets/images/menuSt3.png";
+import sIcon3 from "../../../assets/images/menuSt3-gray.png";
 import { MainTemplate } from "../../Utils/MainTemplate/MainTemplate";
 import { Homeworks } from "../Homeworks/Homeworks";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./StudentProfile.css";
 
+
+
 export const StudentProfile = () => {
   const homeworks = [
-    { title: `Add "Ensayo de Diseño de Procesos Químicos y Bioquímicos"` },
-    { title: `Assess"Póster de Diseño de Procesos Químicos y Bioquímicos"` },
-    { title: `Add "Ensayo de Diseño de Procesos Químicos y Bioquímicos"` },
-    { title: `Assess"Póster de Diseño de Procesos Químicos y Bioquímicos"` },
+    { title: `Add "Nuevo"` },
+    { title: `Add "Dio"` },
+    
   ];
+
 
   const { url, path } = useRouteMatch();
 
   return (
     <React.Fragment>
+      
       <Switch>
         <Route exact path={path}>
           <div className="col title">Menu</div>
           <div className="custom-container">
-            <div className="custom-content">
-              <div className="custom-img-container-student">
+            <div className="custom-contentt">
+              <div className="custom-img-container-studentt">
                 <img
                   src={sIcon1}
                   className="custom-img-student"
@@ -40,11 +43,11 @@ export const StudentProfile = () => {
                 />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                {/* <Link to={`${url}/`}> */}
                   Review Student
                   <br />
                   Outcomes Assessment
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
             <div className="custom-content">
@@ -63,8 +66,8 @@ export const StudentProfile = () => {
                 </Link>
               </span>
             </div>
-            <div className="custom-content">
-              <div className="custom-img-container-student">
+            <div className="custom-contentt">
+              <div className="custom-img-container-studentt">
                 <img
                   src={sIcon3}
                   className="custom-img-student"
@@ -72,11 +75,11 @@ export const StudentProfile = () => {
                 />
               </div>
               <span>
-                <Link to={`${url}/`}>
+                {/* <Link to={`${url}/`}> */}
                   Assess another
                   <br />
                   student
-                </Link>
+                {/* </Link> */}
               </span>
             </div>
           </div>

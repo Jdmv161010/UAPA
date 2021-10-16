@@ -52,33 +52,31 @@ function Footer() {
                        target="_top">Estadísticas</a>
                 </ul>
                 <ul className="Footer-nav__list print--notPrintable">
-                    <a className={"Footer-nav__link"} href="/">Mapa del sitio</a>
-                    <a className={"Footer-nav__link"} href="/">FAQ</a>
+                    <a className={"Footer-nav__link"} >Mapa del sitio</a>
+                    <a className={"Footer-nav__link"} href="https://ingenieria.bogota.unal.edu.co/es/dependencias/vicedecanatura-academica/preguntas-frecuentes.html">FAQ</a>
                     <a className={"Footer-nav__link"} href="https://unal.edu.co/atencion-en-linea/" target="_self">Atención
-                        en línea</a>
-                    <a className={"Footer-nav__link"} href="/">Contáctenos</a>
-                    <a className={"Footer-nav__link"} href="/">Glosario</a>
+                    en línea</a>
+                    <a className={"Footer-nav__link"} href="mailto:autoevalua_fibog@unal.edu.co">Contáctenos</a>
+                    <a className={"Footer-nav__link"} >Glosario</a>
                 </ul>
             </nav>
             <div className="Footer-info">
                 <ul className="Footer-info__list">
                     <li className="Footer-info__item"><b>Contacto página web:</b></li>
-                    <li className="Footer-info__item">Dirección ...</li>
-                    <li className="Footer-info__item">Edificio ...</li>
+                    <li className="Footer-info__item">Dirección: Facultad de Ingeniería</li>
+                    <li className="Footer-info__item">Edificio 401, Of. #2</li>
                     <li className="Footer-info__item">Bogotá D.C., Colombia</li>
                     <li className="Footer-info__item">(+57 1) 316 5000 Ext.</li>
                 </ul>
                 <ul className="Footer-info__list">
-                    <ul className="Footer-info__item"><a rel="noreferrer"
-                                                         href="https://unal.edu.co/fileadmin/user_upload/docs/legal.pdf"
-                                                         target="_blank">&copy; Copyright 2019</a></ul>
+                <ul className="Footer-info__item"><a rel="noreferrer"
+                href="https://unal.edu.co/fileadmin/user_upload/docs/legal.pdf"
+                target="_blank">&copy; Copyright 2021</a></ul>
                     <ul className="Footer-info__item">Algunos derechos reservados.</ul>
                     <ul className="Footer-info__item"><a
-                        title="Comuníquese con el administrador de este sitio web"
-                        href="mailto:EMAIL@unal.edu.co">EMAIL@unal.edu.co</a></ul>
-                    <ul className="Footer-info__item"><a href="index.html#">Acerca de este sitio web</a></ul>
-                    <ul className="Footer-info__item">Actualización:14/05/21</ul>
-
+                    title="Comuníquese con el administrador de este sitio web"
+                    href="mailto:autoevalua_fibog@unal.edu.co">autoevalua_fibog@unal.edu.co</a></ul>
+                    <ul className="Footer-info__item">Actualización: 14/10/21 (v1.0)</ul>
                 </ul>
             </div>
             <div className="Footer-sponsors print--notPrintable">

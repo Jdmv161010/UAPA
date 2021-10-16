@@ -18,6 +18,8 @@ import socialMediaBg from './../../assets/images/icnSocial.png';
 import locationIcon from './../../assets/images/icon-location.svg';
 import iconAccesibility from './../../assets/images/access-icon.png';
 import iconAccesibilityBlue from './../../assets/images/access-icon.jpg';
+//Ant Design
+import { Button } from 'antd';
 
 
 function Header() {
@@ -200,30 +202,13 @@ function Header() {
                     </div>
                     <ul className="Header-navDesktop-menu">
                         <li className="Header-dropdown">
-                            <button className="Header-menuBurguer__link Header-dropdown__button"
-                                    onClick={(e) => toggleDropdown(e)}>Item menú ejemplo 1
-                            </button>
-                            <ul className="Header-dropdown__list">
-                                <li className="Header-dropdown__item"><a href="/"
-                                                                         className="Header-dropdown__link">1</a></li>
-                                <li className="Header-dropdown__item"><a href="/"
-                                                                         className="Header-dropdown__link">2</a></li>
-                                <li className="Header-dropdown__item"><a href="/"
-                                                                         className="Header-dropdown__link">3</a></li>
-                            </ul>
+                            <Button type="link" href="/" style={{color: "white"}}>Home</Button>
                         </li>
                         <li className="Header-dropdown">
-                            <button className="Header-menuBurguer__link Header-dropdown__button"
-                                    onClick={(e) => toggleDropdown(e)}>Item menú ejemplo 2
-                            </button>
-                            <ul className="Header-dropdown__list">
-                                <li className="Header-dropdown__item"><a href="/"
-                                                                         className="Header-dropdown__link">1</a></li>
-                                <li className="Header-dropdown__item"><a href="/"
-                                                                         className="Header-dropdown__link">2</a></li>
-                                <li className="Header-dropdown__item"><a href="/"
-                                                                         className="Header-dropdown__link">3</a></li>
-                            </ul>
+                            <Button type="link" href="mailto:autoevalua_fibog@unal.edu.co" style={{color: "white"}}>Contact us</Button>
+                        </li>
+                        <li className="Header-dropdown">
+                            <Button type="link" href="https://ingenieria.bogota.unal.edu.co/es/dependencias/vicedecanatura-academica/autoevaluacion-y-acreditacion.html" style={{color: "white"}}>Who we are</Button>
                         </li>
                     </ul>
                     <div className="Header-dropdown">
@@ -281,17 +266,13 @@ function Header() {
             {/* Menu burguer - starts*/}
             <ul className={`Header-menuBurguer Header-menuBurguer--${menuMobileDisplay ? 'show' : 'hidden'}`}>
                 <li className="Header-menuBurguer__item">
-                    <a href="/" className="Header-menuBurguer__link">Item menú ejemplo 1</a>
+                    <a href="/" className="Header-menuBurguer__link">Home</a>
                 </li>
-                <li className="Header-dropdown">
-                    <button className="Header-menuBurguer__link Header-dropdown__button"
-                            onClick={(e) => toggleDropdown(e)}>Item menú ejemplo 2
-                    </button>
-                    <ul className="Header-dropdown__list">
-                        <li className="Header-dropdown__item"><a href="/" className="Header-dropdown__link">1</a></li>
-                        <li className="Header-dropdown__item"><a href="/" className="Header-dropdown__link">2</a></li>
-                        <li className="Header-dropdown__item"><a href="/" className="Header-dropdown__link">3</a></li>
-                    </ul>
+                <li className="Header-menuBurguer__item">
+                    <a href="mailto:autoevalua_fibog@unal.edu.co" className="Header-menuBurguer__link">Contact us</a>
+                </li>
+                <li className="Header-menuBurguer__item">
+                    <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/vicedecanatura-academica/autoevaluacion-y-acreditacion.html" className="Header-menuBurguer__link">Who we are</a>
                 </li>
                 <li className="Header-menuBurguer__item Header-dropdown">
                     <button className="Header-dropdown__button"

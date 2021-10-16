@@ -8,6 +8,10 @@ import {
 } from "@ant-design/icons";
 import { Form, Input, Button, Modal } from "antd";
 import "./Login.css";
+import { StartAuthLogin } from "../../store/actions/authActions";
+import { useSelector } from "react-redux";
+
+
 
 export function Login(props) {
   const initialState = {
@@ -17,19 +21,32 @@ export function Login(props) {
 
   const history = useHistory();
   const dispatch = useDispatch();
+  const {access, role} = useSelector(state => state.auth.responseLogin)
   const [state, setState] = useState(initialState);
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
-  const handleReturn = () => {
-    history.push("/");
-  };
+  // const handleReturn = () => {
+  //   history.push("/");
+  // };
 
   const handleLogin = (e) => {
-    history.push("/profile/student");
-  };
+    dispatch(StartAuthLogin(state.username, state.password))
+    if(access){
+      if(role=="Admin"){  /*Cambiar por Professor */
+        history.push("/profile/professor");
+      }else if (role=="Student"){
+        history.push("/profile/student");
+      }else{
+        //Aquí va el perfil del administrador
+      }
+
+  }
+};
+  
+
 
   return (
     
@@ -39,7 +56,7 @@ export function Login(props) {
       <div className="cont0">
         <div className="col">
           <div className="col titleLogin">Log in</div>
-          <Button
+          {/* <Button
             type="link"
             shape="circle"
             style={{
@@ -55,7 +72,7 @@ export function Login(props) {
             }
             size="large"
             onClick={handleReturn}
-          />
+          /> */}
         </div>
 
       </div>
