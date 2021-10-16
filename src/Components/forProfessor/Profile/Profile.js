@@ -41,7 +41,7 @@ export const ProfessorProfile = () => {
                   alt="Student Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/StuOut`}>
+                <Link to={`${url}/StudentAssesment`}>
                 Student Outcomes
                 <br />
                 Assessment
@@ -148,7 +148,7 @@ export const ProfessorProfile = () => {
             </div>
           </div>
         </Route>
-        <Route path={`${url}/StuOut`}>
+        <Route path={`${url}/StudentAssesment`}>
           <StudentOutcomes  />
         </Route>
         <Route path={`${url}/self`}>
