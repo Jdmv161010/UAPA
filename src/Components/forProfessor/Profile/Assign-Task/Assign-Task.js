@@ -4,6 +4,7 @@ import "./Assign-Task.css";
 
 
 
+
 export default function AssignTask() {
     
     return (
@@ -53,36 +54,44 @@ export default function AssignTask() {
                     <div className="Course">
                     Task name
                     </div>
-                    <div className="Design">
-                    Ensayo
-                    </div>
+                    <input className="Design" >
+                    {/* Ensayo */}
+                    </input>
                 </div>
                 <div className="firstC">
                     <div className="Course">
                     Deadline
                     </div>
-                    <div className="CourseA">
+                    <div className="CourseDate">
                     Date 
                     </div>
-                    <div className="DesignB">
-                    30/04/2020
+                    <div className="DesignDate">
+                        <form action="" method="">
+                            <input type="date"></input>
+                            
+                        </form>
                     </div>
-                    <div className="CourseA">
+                    <div className="CourseDate">
                     Hour
                     </div>
-                    <div className="DesignB">
-                    9:00 PM
+                    <div className="DesignDate">
+                        <form action="" method="">
+                            <input type="time"></input>
+                            
+                        </form>
                     </div>
                 </div>
                 <div className="firstB">
                     <div className="CourseTask">
                     Task description
                     </div>
-                    <div className="DesignTask">
-                    Dear students...
+                    <input className="DesignTask">
+                    {/* Dear students...
                     <br />
-                    According to the reading of the book "seeds of deception" by jeffrey M. Smith, write an essay in English no longer than 5 pages.
-                    </div>
+                    According to the reading of the book "seeds of deception" by jeffrey M. Smith, write an essay in English no longer than 5 pages. */}
+                    
+
+                    </input>
                 </div>
                 
                     

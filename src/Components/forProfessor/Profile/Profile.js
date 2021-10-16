@@ -99,7 +99,7 @@ export const ProfessorProfile = () => {
                 alt="Student Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/Assign`}>
+                <Link to={`${url}/AssignTask`}>
                 Assign task to students
                 </Link>
               </span>
@@ -157,7 +157,7 @@ export const ProfessorProfile = () => {
         <Route path={`${url}/Fulfill`}>
           <Fulfill  />
         </Route>
-        <Route path={`${url}/Assign`}>
+        <Route path={`${url}/AssignTask`}>
           <AssignTask  />
         </Route>
 
