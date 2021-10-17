@@ -137,3 +137,17 @@ UAPA - autoevalua_fibog@unal.edu.co
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: src/assets/images/screenshot.png
+
+TODO:
+
+- Organización Drive:
+
+```
+Carpeta del Drive:
+|---Estudiantes / Profesor
+		|---Programa
+				|---Semestre académico
+						|---Asignatura
+								|---Tareas / Guía
+								|---Co-evaluación / Feedback
+```
