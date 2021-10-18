@@ -1,6 +1,7 @@
 import React from "react";
-import {useHistory} from "react-router-dom";
 import "./Assign-Task.css";
+import Select from 'react-select';
+import { StuOutOptions } from './dataAssign.ts';
 
 
 
@@ -9,18 +10,17 @@ export default function AssignTask() {
     
     return (
         <div className="contAssign">
-            <div className="contAssign1">
-                    <div className="col element title">
-                    Assign Task To Students
-                    </div>
+            
+            <div className="col element title">
+            Assign Task To Students
             </div>
             
             <div className="contAssign2">
-                <div className="firstC">
-                    <div className="Course">
+                <div className="contAssign3">
+                    <div className="contAssignTitulo">
                     Course
                     </div>
-                    <div className="Design">
+                    <div className="contAssignContenido">
                         
                         <label for="Des"> </label> 
                             <select nameclass="Des">
@@ -28,82 +28,89 @@ export default function AssignTask() {
                                 <option value="Desuno">Introduccion (20000)</option>
                                 <option value="Desdos">Introduccion a las pruebas (1)</option>
                                 
-                            </select>
+                        </select>
         
                     </div>
                 </div>
-                <div className="firstC">
-                    <div className="Course">
+                <div className="contAssign3">
+                    <div className="contAssignTitulo">
                     Student Outcome
                     </div>
-                    <div className="Design">
+                    <div className="contAssignContenido">
+                        <Select
+                            
+                            isMulti
+                            name="colors"
+                            options={StuOutOptions}
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+                        />
                         
-                        <label for="StudentO"> </label> 
-                            <select nameclass="StudentO">
-                                <option disabled="">1.Ability to communicate effectively with a range of audiences</option>
-                                <option value="SO">2.Ability to communicate effectively with a range of audiences</option>
-                                <option value="SO">3.Ability to communicate effectively with a range of audiences</option>
-                                
-                            </select>
         
                     </div>
                     
 
                 </div>
-                <div className="firstC">
-                    <div className="Course">
+                <div className="contAssign3">
+                    <div className="contAssignTitulo">
                     Task name
                     </div>
-                    <input className="Design" >
+                    <input className="contAssignContenido" >
                     {/* Ensayo */}
                     </input>
                 </div>
-                <div className="firstC">
-                    <div className="Course">
+                <div className="contAssign3">
+                    <div className="contAssignTitulo">
                     Deadline
                     </div>
-                    <div className="CourseDate">
+                    <div className="contAssignDateT">
                     Date 
                     </div>
-                    <div className="DesignDate">
+                    <div className="contAssignDateC">
                         <form action="" method="">
                             <input type="date"></input>
                             
                         </form>
                     </div>
-                    <div className="CourseDate">
+                    <div className="contAssignDateT">
                     Hour
                     </div>
-                    <div className="DesignDate">
+                    <div className="contAssignDateC">
                         <form action="" method="">
                             <input type="time"></input>
                             
                         </form>
                     </div>
                 </div>
-                <div className="firstB">
-                    <div className="CourseTask">
+                <div className="contAssign4">
+                    <div className="contAssignTask">
                     Task description
                     </div>
-                    <input className="DesignTask">
-                    {/* Dear students...
-                    <br />
-                    According to the reading of the book "seeds of deception" by jeffrey M. Smith, write an essay in English no longer than 5 pages. */}
+                    <input className="contAssignContenidoTask">
                     
-
                     </input>
                 </div>
-                
+
+                <div className="contAssign3">
+                    <div className="contAssignTitulo">
+                        Add Url ( guide in pdf )
+                    </div>
+                    <input className="contAssignContenido" placeholder="Add your url here" >
+                    {/* Ensayo */}
+                    </input>
+                </div>
+
+                <div className="contAssign5">
+                    <button className="EnviarTarea-button">
+                        Enviar tarea 
+                     </button>    
+                </div>
                     
                 
             </div>
-            
-                
-            
-    
-        </div>
 
-        
+    
+        </div>  
     );
 
 }

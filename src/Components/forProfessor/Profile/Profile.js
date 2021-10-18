@@ -20,6 +20,7 @@ import { Assessments } from "./Self-Assessment/Self-Assessment";
 import Fulfill from "./Fulfill/Fulfill";
 import AssignTask from "./Assign-Task/Assign-Task";
 import StudentOutcomes from "./Student-outcomes/Student-outcomes";
+import HomeworkPicker from "./HomeworkPicker/HomeworkPicker";
 
 
 export const ProfessorProfile = () => {
@@ -41,7 +42,7 @@ export const ProfessorProfile = () => {
                   alt="Student Outcomes Assessment" />
               </div>
               <span>
-                <Link to={`${url}/StudentAssesment`}>
+                <Link to={`${url}/HomeworkPicker`}>
                 Student Outcomes
                 <br />
                 Assessment
@@ -159,6 +160,9 @@ export const ProfessorProfile = () => {
         </Route>
         <Route path={`${url}/AssignTask`}>
           <AssignTask  />
+        </Route>
+        <Route path={`${url}/HomeworkPicker`}>
+          <HomeworkPicker  />
         </Route>
 
       </Switch>

@@ -1,14 +1,14 @@
 import React,{Component} from "react";
-import "./Student-outcomes.css";
-import sIcon2 from "../../../../assets/images/menuSt2.png";
-import {Card2} from "../../../Utils/Card copy/Card"
+import "./StudentOutcomesStu.css";
+import sIcon2 from "../../../assets/images/menuSt2.png";
+import { Card2 } from "../../Utils/Card copy/Card";
 import {Upload, Button} from 'antd';
 import Select from 'react-select';
 import { colourOptions } from './data.ts';
 
 
 
-export default function StudentOutcomes() {
+export default function StudentOutcomesStu() {
  
     return (
         <div className="contStuOut">

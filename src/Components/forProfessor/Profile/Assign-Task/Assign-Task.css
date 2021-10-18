@@ -1,12 +1,14 @@
+/* contenedor principal */
 .contAssign{
     background-color:rgb(196, 196, 196);
     align-items: center;
     text-align: center;
     width: 1200px;
-    height: 550px ;
-    justify-content: center;
+    height: 670px ;
+    border-radius: 10px;
 }
 
+/* contenedor secundario */
 .contAssign2{
     /* background-color: red; */
     height: 500px;
@@ -16,12 +18,10 @@
     border-radius: 10px;
     padding: 0.5em; 
     margin: 10px;
-    
-    
-    
+
 }
 
-.firstC{
+.contAssign3{
     /* background-color: white; */
     display: flex;
     flex-direction: row;
@@ -35,7 +35,7 @@
     
 }
 
-.firstB{
+.contAssign4{
     /* background-color: white; */
     display: flex;
     flex-direction: row;
@@ -49,27 +49,32 @@
     
 }
 
-.Course{
+/* contenedor titulos */
+.contAssignTitulo{
     background-color: #8ca2d3;
     width: 380px;
     border-radius: 10px;
     padding: 0.5em; 
     margin: 10px;
-    height: 50px;
+    height: 60px;
     color: white;
 
 }
 
-.Design{
+/* contenedor contenidos */
+.contAssignContenido{
     background-color: white;
     width: 900px;
     border-radius: 10px;
     padding: 0.5em; 
     margin: 10px;
-    height: 50px;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    
 }
 
-.CourseTask{
+.contAssignTask{
     background-color: #8ca2d3;
     width: 180px;
     border-radius: 10px;
@@ -80,7 +85,7 @@
 
 }
 
-.DesignTask{
+.contAssignContenidoTask{
     background-color: white;
     width: 1100px;
     border-radius: 10px;
@@ -90,7 +95,7 @@
      ;
 }
 
-.CourseDate{
+.contAssignDateT{
     background-color: #8ca2d3;
     width: 160px;
     border-radius: 10px;
@@ -101,7 +106,7 @@
 
 }
 
-.DesignDate{
+.contAssignDateC{
     background-color: white;
     width: 230px;
     border-radius: 10px;
@@ -111,5 +116,23 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+}
 
+/* boton Enviar */
+.EnviarTarea-button{
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: #182f58;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 15px 20px;
+    
+}
+
+.EnviarTarea-button:hover {
+    background-color: #19284e;
+    transform: scale(1.08);
+    
 }
