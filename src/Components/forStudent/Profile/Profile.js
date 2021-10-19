@@ -14,7 +14,7 @@ import { MainTemplate } from "../../Utils/MainTemplate/MainTemplate";
 import { Homeworks } from "../Homeworks/Homeworks";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./StudentProfile.css";
-import StudentOutcomesStu from "../StudentOutcomesStu/StudentOutcomesStu";
+import CoEvaluation from "../CoEvaluation/CoEvaluation.js";
 
 
 
@@ -76,7 +76,7 @@ export const StudentProfile = () => {
                 />
               </div>
               <span>
-                <Link to={`${url}/StudentOutcomesStu`}>
+                <Link to={`${url}/CoEvaluation`}>
                   Assess another
                   <br />
                   student
@@ -88,8 +88,8 @@ export const StudentProfile = () => {
         <Route path={`${url}/submissions`}>
           <Homeworks listHomeworks={homeworks} />
         </Route>
-        <Route path={`${url}/StudentOutcomesStu`}>
-          <StudentOutcomesStu  />
+        <Route path={`${url}/CoEvaluation`}>
+          <CoEvaluation  />
         </Route>
 
       </Switch>

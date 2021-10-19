@@ -9,7 +9,7 @@ import { colourOptions } from './data.ts';
 
 
 export default function StudentOutcomes() {
- 
+
     return (
         <div className="contStuOut">
             
@@ -42,14 +42,14 @@ export default function StudentOutcomes() {
                     <div className="contStuOutTitulo">
                     Group of the student assesed
                     </div>
-                    <div className="contStuOutContenido">
-                        
-                        <label for="Group"> </label> 
-                            <input  >
-                            {/* Ensayo */}
-                            </input>
-    
-                    </div>
+                    <form>
+                        <input className="contStuOutContenido2" type="text" id="caja" disabled=""  >
+                        </input>
+                        <button className="contStuOutbuttonHide" disable={true}>
+                            Seleccionar
+                        </button>
+                    </form>
+                    
                 </div>
                 
                 
@@ -61,6 +61,16 @@ export default function StudentOutcomes() {
                     </b>
                     </div>
                 </div>
+
+                <div className="contStuOut4">
+                    
+                    <div className="ContStuOutTex">
+                        <b>
+                            SWITCH
+                        </b>
+                    </div>
+                </div>
+
                 <div className="contStuOut5">
                     
                     <div className="ContStuOutTex2">

@@ -3,8 +3,8 @@
     background-color:rgb(196, 196, 196);
     align-items: center;
     text-align: center;
-    height: 1260px;
-    margin: 10px ;
+    height: 1450px !important;
+    margin: 10px;
     width: 1200px;
     border-radius: 10px;
 }
@@ -89,6 +89,19 @@
     padding: 0.5em; 
     margin: 10px;
     height: 60px !important;
+    text-align: center;
+    align-items: center;
+}
+
+.contStuOutContenido2{
+    background-color: white;
+    width: 600px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height: 60px !important;
+    text-align: center;
+    align-items: center;
 }
 
 /* contenedor texto */
@@ -135,7 +148,7 @@
     padding: 15px 20px;
     
 }
-
+/* hoover boton calificar */
 .calificarTarea-button:hover {
     background-color: #19284e;
     transform: scale(1.08);

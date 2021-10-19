@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
-
 import sIcon2 from "../../../assets/images/menuSt2.png";
-
 import { Card } from "../../Utils/Card/Card";
 import { MainTemplate } from "../../Utils/MainTemplate/MainTemplate";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";

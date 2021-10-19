@@ -11,7 +11,7 @@ import { colourOptions } from './data.ts';
 export default function StudentOutcomesStu() {
  
     return (
-        <div className="contStuOut">
+        <div className="contStuOutStu">
             
             <div className="col element title">
             Tarea: Nuevo
@@ -143,7 +143,10 @@ export default function StudentOutcomesStu() {
                 <div className="contStuOut7">
                     <button className="calificarTarea-button">
                         
-                        Calificar tarea
+                        {/* <Link to={`${url}/`}> */}
+                        Enviar tarea
+                        
+                        {/* </Link> */}
                         
                         
                      </button>
