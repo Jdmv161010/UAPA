@@ -15,6 +15,9 @@ import { Homeworks } from "../Homeworks/Homeworks";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./StudentProfile.css";
 import CoEvaluation from "../CoEvaluation/CoEvaluation.js";
+import { useDispatch } from "react-redux";
+import { getHomeworksData } from "../../../store/actions/aesciActions";
+
 
 
 
@@ -26,7 +29,12 @@ export const StudentProfile = () => {
   ];
 
 
+  
   const { url, path } = useRouteMatch();
+  const dispatch = useDispatch()
+  const handleGetHomeworks = () => {
+    dispatch(getHomeworksData("Jose"))
+  }
 
   return (
     <React.Fragment>
@@ -59,7 +67,7 @@ export const StudentProfile = () => {
                   alt="Add submission of courses"
                 />
               </div>
-              <span>
+              <span onClick={handleGetHomeworks}>
                 <Link to={`${url}/submissions`}>
                   Add submission of
                   <br />

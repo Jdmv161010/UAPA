@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React,{ useState} from "react";
 import "./Student-outcomes.css";
 import sIcon2 from "../../../../assets/images/menuSt2.png";
 import {Card2} from "../../../Utils/Card copy/Card"
@@ -6,10 +6,36 @@ import {Upload, Button} from 'antd';
 import Select from 'react-select';
 import { colourOptions } from './data.ts';
 
+function comprobar()
+{   
+    if (document.getElementById("chec").checked)
+      document.getElementById('boton').readOnly = false;
+        
+    else
+      document.getElementById('boton').readOnly = true;
+        
+}
 
 
 export default function StudentOutcomes() {
 
+    // const[inputSelected, setinputSelected]=useState(false);
+
+    // const[checkSelected, setCheckSelected]=useState(false);
+
+    
+    
+    // const handleChangeCheckbox= () => {
+    //     if(onclick=true){
+    //         setinputSelected= true;
+    //     }
+    //     else{
+    //         setinputSelected= false;
+    //     }
+    // }
+    
+    
+    
     return (
         <div className="contStuOut">
             
@@ -42,13 +68,23 @@ export default function StudentOutcomes() {
                     <div className="contStuOutTitulo">
                     Group of the student assesed
                     </div>
-                    <form>
-                        <input className="contStuOutContenido2" type="text" id="caja" disabled=""  >
-                        </input>
-                        <button className="contStuOutbuttonHide" disable={true}>
-                            Seleccionar
-                        </button>
-                    </form>
+                    <div className="contStuOutContenido3">
+                        <form>
+                            {/* <p>
+                            <input type="checkbox" Onclick={handleChangeCheckbox}  name="checkinput" ></input>
+                            
+                            </p>
+                            <p> 
+                            <input className="contStuOutContenido2" type="text" id="caja" disabled={!inputSelected} ></input>
+                            </p> */}
+                            <input name="chec" type="checkbox" id="chec" onChange={comprobar} ></input>
+                            
+    
+                            <input name="text" id="boton" readOnly></input>
+                        
+                        </form>
+                    </div>
+                    
                     
                 </div>
                 
