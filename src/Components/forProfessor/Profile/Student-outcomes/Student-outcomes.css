@@ -3,7 +3,7 @@
     background-color:rgb(196, 196, 196);
     align-items: center;
     text-align: center;
-    height: 1450px !important;
+    height: 1500px !important;
     margin: 10px;
     width: 1200px;
     border-radius: 10px;
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    padding: 0.5em; 
+    padding: 0.5em !important; 
     margin: 10px;
 }
 
@@ -30,7 +30,7 @@
     font-size: 1.5em;
     margin: 10px;
     justify-content: space-between;
-    
+    text-align: center;
 }
 
 /* contenedor descripcion */
@@ -52,8 +52,9 @@
     flex-direction: row;
     height: 110px;
     font-size: 1.5em;
-    height:500px;
+    height:700px !important;
     margin: 10px;
+    
     justify-content: space-between;
     
 }
@@ -129,12 +130,12 @@
 /* contenedor radiobutton */
 .ContStuOutTex2{
     background-color: white;
-    width: 1300px;
+    width: 1300px !important;
     border-radius: 10px;
-    padding: 0.5em; 
+    padding: 0.5em !important; 
     margin: 10px;
-    
-    text-align: left;
+    height: 700px;
+    text-align: center;
 }
 
 .contStuOutUpload{
@@ -165,3 +166,27 @@
     transform: scale(1.08);
 }
 
+.ContStuOutBotonesCalificacion{
+    
+    width: 1300px;
+    border-radius: 10px;
+    padding: 0.5em; 
+    margin: 10px;
+    height:100px;
+    text-align: center;
+
+}
+
+.calificacionTarea-button{
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+    background-color: #182f58;
+    color: white;
+    font-size: 38px;
+    cursor: pointer;
+    width: 536px;
+    
+    
+    
+}

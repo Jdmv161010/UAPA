@@ -1,10 +1,20 @@
-import React,{ useState} from "react";
+import React,{ useState, Component } from "react";
 import "./Student-outcomes.css";
 import sIcon2 from "../../../../assets/images/menuSt2.png";
 import {Card2} from "../../../Utils/Card copy/Card"
 import {Upload, Button} from 'antd';
 import Select from 'react-select';
 import { colourOptions } from './data.ts';
+import CalificacionNumerico from "./CalificacionNumerico";
+import CalificacionTexto from "./CalificacionTexto";
+import {
+    Link,
+    Route,
+    useHistory,
+    useRouteMatch,
+    Switch,
+  } from "react-router-dom";
+import HomeworkPicker from "../HomeworkPicker/HomeworkPicker";
 
 function comprobar()
 {   
@@ -14,29 +24,16 @@ function comprobar()
     else
       document.getElementById('boton').readOnly = true;
         
-}
+};
+
 
 
 export default function StudentOutcomes() {
-
-    // const[inputSelected, setinputSelected]=useState(false);
-
-    // const[checkSelected, setCheckSelected]=useState(false);
-
-    
-    
-    // const handleChangeCheckbox= () => {
-    //     if(onclick=true){
-    //         setinputSelected= true;
-    //     }
-    //     else{
-    //         setinputSelected= false;
-    //     }
-    // }
-    
-    
-    
+    const { url, path } = useRouteMatch();
     return (
+        <React.Fragment>
+        <Switch>
+        <Route exact path={path}>
         <div className="contStuOut">
             
             <div className="col element title">
@@ -70,13 +67,7 @@ export default function StudentOutcomes() {
                     </div>
                     <div className="contStuOutContenido3">
                         <form>
-                            {/* <p>
-                            <input type="checkbox" Onclick={handleChangeCheckbox}  name="checkinput" ></input>
                             
-                            </p>
-                            <p> 
-                            <input className="contStuOutContenido2" type="text" id="caja" disabled={!inputSelected} ></input>
-                            </p> */}
                             <input name="chec" type="checkbox" id="chec" onChange={comprobar} ></input>
                             
     
@@ -88,7 +79,18 @@ export default function StudentOutcomes() {
                     
                 </div>
                 
-                
+                {/* <div className="contStuOut3">
+                    <div className="contStuOutTitulo">
+                    type of qualification
+
+                    </div>
+                    <div className="contStuOutContenido3">
+                        
+                    </div>
+                    
+                    
+                </div> */}
+
                 <div className="contStuOut4">
                     
                     <div className="ContStuOutTex">
@@ -98,77 +100,18 @@ export default function StudentOutcomes() {
                     </div>
                 </div>
 
-                <div className="contStuOut4">
-                    
-                    <div className="ContStuOutTex">
-                        <b>
-                            SWITCH
-                        </b>
-                    </div>
-                </div>
+
 
                 <div className="contStuOut5">
                     
                     <div className="ContStuOutTex2">
-                        <form action="" class="formulario">
-                            <div class="radio">
-                                <b>    
-                                The thesis of the essay is clear and properly delimited:
-                                </b>
-                                <p>
-                                    <input type="radio" name="tipo" id="check1"></input>
-                                    <label for="check1">
-                                    The thesis is clear and properly delimited. The point of view of the author is clearly identified.
-                                    </label>
-                                    
-                                </p>
-                                <p>
-                                    <input type="radio" name="tipo" id="check2"></input>
-                                    <label for="check2">
-                                    The thesis is clear and properly delimited.
-                                    </label>
-                                    
-                                </p>
-                                <p>
-                                    <input type="radio" name="tipo" id="check3"></input>
-                                    <label for="check3">
-                                    There is a thesis, but it is confusing, and its scope is so wide.
-                                    </label>
-                                    
-                                </p>
-                                <p>
-                                    <input type="radio" name="tipo" id="check4"></input>
-                                    <label for="check4">
-                                    The thesis cannot be identified.
-                                    </label>
-                                    
-                                </p>
-                            </div>
-                        </form>
-                        <form action="" class="formulario">
-                            <div class="radio2">
-                                <b>    
-                                Minimum presentation criteria are fulfilled. A too short essay is one page or less, without the references. A too big essay is more than five pages. without the references:
-                                </b>
-                                <p>
-                                    <input type="radio" name="tipo" id="check5"></input>
-                                    <label for="check5">
-                                    The text has an appropiate length (too short or too long). The author is clearly identified, the paragraphs are graphically differentiated, and the font size is adequate.
-                                    </label>
-                                    
-                                </p>
-                                <p>
-                                    <input type="radio" name="tipo" id="check6"></input>
-                                    <label for="check6">
-                                    The text does not have an appropiate length (too short or too long). The author cannot be identified, the paragraphs are not graphically differentiated, and the font size is too small or too big.
-                                    </label>
-                                    
-                                </p>
-                            </div>
-                        </form>
-                    </div>
+                            <CalifiacionF></CalifiacionF>
 
+                    </div>
                 </div>
+                
+                
+                
                 <div className="contStuOut6">
                     <div className="contStuOutUpload">
                         <Upload
@@ -189,26 +132,61 @@ export default function StudentOutcomes() {
                 <div className="contStuOut7">
                     <button className="calificarTarea-button">
                         
-                        Calificar tarea
+                    <Link to={`${url}/HomeworkPicker`}>
+                    Calificar tarea
+                    
+                    </Link>
                         
                         
                      </button>
                 </div>
               
             </div>
-            
-            
-                
-            
-    
-        </div>
 
-        
+        </div>
+        </Route>
+        <Route path={`${url}/HomeworkPicker`}>
+                <HomeworkPicker  />
+        </Route>
+        </Switch>
+    </React.Fragment>
     );
 
+};
+
+
+ class CalifiacionF extends React.Component {
+    state = {
+        component: <CalificacionTexto></CalificacionTexto>  //Esta es la propiedad del estado donde va a estar el componente que se muestra en el momento
+    }
+
+    changeComponent = (param) => {//esta es la funcion donde cambio de componente a mostrar
+        this.setState({
+            component: param
+        });
+
+    }
+    render() {
+        return (
+          <div clasname="ContStuOutTex3" defaultSelectedKeys={['1']}>
+            {/* Este es el boton 1 */}
+            <button id="btn-atras" className="calificacionTarea-button" onClick={() => this.changeComponent(<CalificacionTexto />)} key="1">
+                Calificacion Textual
+            </button>
+
+            {/* Este es el boton 2 */}
+            <button id="btn-siguiente" className="calificacionTarea-button" onClick={() => this.changeComponent(<CalificacionNumerico />)} key="2">
+                Calificacion Numerica
+            </button>
+            
+            {this.state.component}
+             
+            
+            
+          </div>
+        );
+      }
+
 }
-
-
-
 
 

@@ -5,12 +5,23 @@ import { Card2 } from "../../Utils/Card copy/Card";
 import {Upload, Button} from 'antd';
 import Select from 'react-select';
 import { colourOptions } from './data.ts';
+import {
+    Link,
+    Route,
+    useHistory,
+    useRouteMatch,
+    Switch,
+  } from "react-router-dom";
+  import CoEvaluation from "../CoEvaluation/CoEvaluation";
 
 
 
 export default function StudentOutcomesStu() {
- 
+    const { url, path } = useRouteMatch();
     return (
+        <React.Fragment>
+        <Switch>
+        <Route exact path={path}>
         <div className="contStuOutStu">
             
             <div className="col element title">
@@ -143,10 +154,10 @@ export default function StudentOutcomesStu() {
                 <div className="contStuOut7">
                     <button className="calificarTarea-button">
                         
-                        {/* <Link to={`${url}/`}> */}
+                        <Link to={`${url}/Coevaluation`}>
                         Enviar tarea
                         
-                        {/* </Link> */}
+                        </Link>
                         
                         
                      </button>
@@ -159,6 +170,12 @@ export default function StudentOutcomesStu() {
             
     
         </div>
+        </Route>
+        <Route path={`${url}/Coevaluation`}>
+                <CoEvaluation  />
+        </Route>
+        </Switch>
+        </React.Fragment> 
 
         
     );
