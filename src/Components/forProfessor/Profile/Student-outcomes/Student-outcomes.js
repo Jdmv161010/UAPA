@@ -95,7 +95,7 @@ export default function StudentOutcomes() {
                     
                     <div className="ContStuOutTex">
                     <b>
-                    Read carefully the performance indicators before reading the essay. Then, read the essay and determinate the level of the attainment for each indicator. Select just one option.
+                    Read carefully the performance indicators before reading the work. Then, read the work and determinate the level of the attainment for each indicator. Select just one option.
                     </b>
                     </div>
                 </div>
@@ -133,7 +133,7 @@ export default function StudentOutcomes() {
                     <button className="calificarTarea-button">
                         
                     <Link to={`${url}/HomeworkPicker`}>
-                    Calificar tarea
+                    Asses work
                     
                     </Link>
                         
@@ -171,12 +171,12 @@ export default function StudentOutcomes() {
           <div clasname="ContStuOutTex3" defaultSelectedKeys={['1']}>
             {/* Este es el boton 1 */}
             <button id="btn-atras" className="calificacionTarea-button" onClick={() => this.changeComponent(<CalificacionTexto />)} key="1">
-                Calificacion Textual
+                Textual Assesment
             </button>
 
             {/* Este es el boton 2 */}
             <button id="btn-siguiente" className="calificacionTarea-button" onClick={() => this.changeComponent(<CalificacionNumerico />)} key="2">
-                Calificacion Numerica
+                Numeric Assesment
             </button>
             
             {this.state.component}

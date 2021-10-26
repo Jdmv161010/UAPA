@@ -159,15 +159,10 @@ export default function StudentOutcomesStu() {
                         
                         </Link>
                         
-                        
                      </button>
                 </div>
               
             </div>
-            
-            
-                
-            
     
         </div>
         </Route>

@@ -44,7 +44,7 @@ export default function AssignTask() {
                 </div>
                 <div className="contAssign3">
                     <div className="contAssignTitulo">
-                    Student Outcome
+                    Indicators
                     </div>
                     <div className="contAssignContenido">
                         <Select

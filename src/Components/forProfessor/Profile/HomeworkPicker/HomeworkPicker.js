@@ -29,7 +29,7 @@ export default function HomeworkPicker() {
             <div className="contTareas">
                 <div className="firstC">
                     <div className="Course">
-                    Materia
+                    Subject
                     </div>
                     <div className="Design">
                         
@@ -45,7 +45,7 @@ export default function HomeworkPicker() {
                 </div>
                 <div className="firstC">
                     <div className="Course">
-                    Tareas
+                    Homeworks
                     </div>
                     <div className="Design">
                         
@@ -78,7 +78,7 @@ export default function HomeworkPicker() {
             
             <button className="calificarTarea-button">
                     <Link to={`${url}/StudentAssesment`}>
-                    Calificar tarea
+                    Asses work
                     
                     </Link>
             </button>
