@@ -1,4 +1,4 @@
-import React,{ useState, Component } from "react";
+import React from "react";
 import "./Student-outcomes.css";
 import sIcon2 from "../../../../assets/images/menuSt2.png";
 import {Card2} from "../../../Utils/Card copy/Card"
@@ -7,14 +7,7 @@ import Select from 'react-select';
 import { colourOptions } from './data.ts';
 import CalificacionNumerico from "./CalificacionNumerico";
 import CalificacionTexto from "./CalificacionTexto";
-import {
-    Link,
-    Route,
-    useHistory,
-    useRouteMatch,
-    Switch,
-  } from "react-router-dom";
-import HomeworkPicker from "../HomeworkPicker/HomeworkPicker";
+
 
 function comprobar()
 {   
@@ -29,11 +22,9 @@ function comprobar()
 
 
 export default function StudentOutcomes() {
-    const { url, path } = useRouteMatch();
+    
     return (
-        <React.Fragment>
-        <Switch>
-        <Route exact path={path}>
+        
         <div className="contStuOut">
             
             <div className="col element title">
@@ -130,26 +121,17 @@ export default function StudentOutcomes() {
                 </div>
 
                 <div className="contStuOut7">
-                    <button className="calificarTarea-button">
-                        
-                    <Link to={`${url}/HomeworkPicker`}>
-                    Asses work
-                    
-                    </Link>
-                        
-                        
-                     </button>
+                    <a href="http://localhost:3000/aesci/profile/professor/HomeworkPicker"  onClick="this.href">
+                        <button className="calificarTarea-button" >                           
+                            Asses work
+                        </button>
+                    </a>
                 </div>
               
             </div>
 
         </div>
-        </Route>
-        <Route path={`${url}/HomeworkPicker`}>
-                <HomeworkPicker  />
-        </Route>
-        </Switch>
-    </React.Fragment>
+        
     );
 
 };

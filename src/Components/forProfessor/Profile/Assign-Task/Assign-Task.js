@@ -2,23 +2,15 @@ import React from "react";
 import "./Assign-Task.css";
 import Select from 'react-select';
 import { StuOutOptions } from './dataAssign.ts';
-import {
-    Link,
-    Route,
-    useHistory,
-    useRouteMatch,
-    Switch,
-  } from "react-router-dom";
-import { ProfessorProfile } from "../Profile";
+
+
 
 
 
 export default function AssignTask() {
-    const { url, path } = useRouteMatch();
+    
     return (
-        <React.Fragment>
-        <Switch>
-        <Route exact path={path}>
+        
         <div className="contAssign">
             
             <div className="col element title">
@@ -111,12 +103,12 @@ export default function AssignTask() {
                 </div>
 
                 <div className="contAssign5">
-                    <button className="EnviarTarea-button">
-                        <Link to={`${url}/professor`}>
-                        Enviar tarea
-                        
-                        </Link>
-                     </button>    
+                     <a href="http://localhost:3000/aesci/profile/professor"  onClick="this.href">
+                        <button className="EnviarTarea-button" >                        
+                            Send Assessment
+                        </button>
+                    </a>
+                    
                 </div>
                     
                 
@@ -124,12 +116,7 @@ export default function AssignTask() {
 
     
         </div>
-        </Route>
-        <Route path={`${url}/professor`}>
-                <ProfessorProfile  />
-        </Route>
-        </Switch>
-        </React.Fragment>  
+        
     );
 
 }

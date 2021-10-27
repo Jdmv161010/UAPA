@@ -1,27 +1,18 @@
-import React,{Component} from "react";
+import React from "react";
 import "./StudentOutcomesStu.css";
 import sIcon2 from "../../../assets/images/menuSt2.png";
 import { Card2 } from "../../Utils/Card copy/Card";
 import {Upload, Button} from 'antd';
 import Select from 'react-select';
 import { colourOptions } from './data.ts';
-import {
-    Link,
-    Route,
-    useHistory,
-    useRouteMatch,
-    Switch,
-  } from "react-router-dom";
-  import CoEvaluation from "../CoEvaluation/CoEvaluation";
+
 
 
 
 export default function StudentOutcomesStu() {
-    const { url, path } = useRouteMatch();
+    
     return (
-        <React.Fragment>
-        <Switch>
-        <Route exact path={path}>
+        
         <div className="contStuOutStu">
             
             <div className="col element title">
@@ -152,26 +143,17 @@ export default function StudentOutcomesStu() {
                 </div>
 
                 <div className="contStuOut7">
-                    <button className="calificarTarea-button">
-                        
-                        <Link to={`${url}/Coevaluation`}>
-                        Enviar tarea
-                        
-                        </Link>
-                        
-                     </button>
+                    <a href="http://localhost:3000/aesci/profile/student/CoEvaluation"  onClick="this.href">
+                        <button className="calificarTarea-button" >                           
+                            Send Assessment
+                        </button>
+                    </a>
                 </div>
               
             </div>
     
         </div>
-        </Route>
-        <Route path={`${url}/Coevaluation`}>
-                <CoEvaluation  />
-        </Route>
-        </Switch>
-        </React.Fragment> 
-
+        
         
     );
 
