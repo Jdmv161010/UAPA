@@ -2,10 +2,22 @@ import React from "react";
 import "./Assign-Task.css";
 import Select from 'react-select';
 import { StuOutOptions } from './dataAssign.ts';
+import { StartNewtarea } from "../../../../store/actions/aesciActions";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
 
+// const state = useSelector(state => state)
+
+
+  
+ 
+//   const dispatch = useDispatch()
+  
+//   const handleNewTarea = () => {
+//     dispatch(StartNewtarea())
+//   }
 
 export default function AssignTask() {
     

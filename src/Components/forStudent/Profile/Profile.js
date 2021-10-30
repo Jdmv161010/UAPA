@@ -15,8 +15,10 @@ import { Homeworks } from "../Homeworks/Homeworks";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./StudentProfile.css";
 import CoEvaluation from "../CoEvaluation/CoEvaluation.js";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getHomeworksData } from "../../../store/actions/aesciActions";
+
+
 
 
 
@@ -28,10 +30,13 @@ export const StudentProfile = () => {
     
   ];
 
+const state = useSelector(state => state.aesci.Homeworks)
+
 
   
   const { url, path } = useRouteMatch();
   const dispatch = useDispatch()
+  
   const handleGetHomeworks = () => {
     dispatch(getHomeworksData("Jose"))
   }
@@ -94,7 +99,7 @@ export const StudentProfile = () => {
           </div>
         </Route>
         <Route path={`${url}/submissions`}>
-          <Homeworks listHomeworks={homeworks} />
+          <Homeworks listHomeworks={state} />
         </Route>
         <Route path={`${url}/CoEvaluation`}>
           <CoEvaluation  />

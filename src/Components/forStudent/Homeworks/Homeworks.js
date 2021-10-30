@@ -22,7 +22,7 @@ export const Homeworks = ({ listHomeworks }) => {
               {listHomeworks.map((homework) => (
                 <Card
                   img={sIcon2}
-                  title={<Link to={`${url}/homeworks`}>{homework.title}</Link>}
+                  title={<Link to={`${url}/homeworks`}>{homework.id}</Link>}
                 />
               ))}
             </div>

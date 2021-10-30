@@ -30,6 +30,11 @@ export const HomeworksDetail = ({ homework }) => {
           />
         </Upload>
       </div>
+      <a href="http://localhost:3000/aesci/profile/student/submissions"  onClick="this.href">
+                        <button className="EnviarTarea-button" >                        
+                            Send Assessment
+                        </button>
+                    </a>
     </div>
   );
 };
