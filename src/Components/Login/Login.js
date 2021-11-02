@@ -4,9 +4,9 @@ import { useHistory, withRouter } from "react-router-dom";
 import {
   UserOutlined,
   LockOutlined,
-  LeftCircleOutlined,
+  
 } from "@ant-design/icons";
-import { Form, Input, Button, Modal } from "antd";
+import { Form, Input} from "antd";
 import "./Login.css";
 import { StartAuthLogin } from "../../store/actions/authActions";
 import { useSelector } from "react-redux";
@@ -35,9 +35,9 @@ export function Login(props) {
   const handleLogin = (e) => {
     dispatch(StartAuthLogin(state.username, state.password))
     if(access){
-      if(role=="Admin"){  /*Cambiar por Professor */
+      if(role==="Admin"){  /*Cambiar por Professor */
         history.push("/profile/professor");
-      }else if (role=="Student"){
+      }else if (role==="Student"){
         history.push("/profile/student");
       }else{
         //Aquí va el perfil del administrador
@@ -53,30 +53,11 @@ export function Login(props) {
     
     <div className="cont"> 
       
-      <div className="cont0">
-        <div className="col">
-          <div className="col titleLogin">Log in</div>
-          {/* <Button
-            type="link"
-            shape="circle"
-            style={{
-              position: "absolute",
-              top: "5em",
-              right: "1em",
-              zIndex: 500,
-            }}
-            icon={
-              <LeftCircleOutlined
-                style={{ fontSize: "2.5em", color: "#1E3C6E" }}
-              />
-            }
-            size="large"
-            onClick={handleReturn}
-          /> */}
-        </div>
-
-      </div>
       
+      <div className="col">
+        <div className="col titleLogin">Log in</div>
+      </div>
+
       <div className="cont2">
         
         <div className="col">
@@ -90,7 +71,6 @@ export function Login(props) {
             <div className="col-5 trim">
               <div
                 className="row login-form-header"
-                style={{ height: "50px" }}
               />
               <Form
                 className="row login-form-container"
@@ -160,21 +140,3 @@ export function Login(props) {
 
 export default withRouter(Login);
 
-// useEffect(() => {
-//   initialState.username === "student@unaledu.co" &&
-//     history.push("/profile/student");
-//   initialState.username === "professor@unaledu.co" &&
-//     history.push("/profile/professor");
-// }, [initialState]);
-
-// dispatch(StartAuthLogin(state.username, state.password));
-// console.log(responseLogin.role);
-// props.history.push("/profile");
-// login(state.username, state.password).catch((error) => {
-//   console.log(error);
-//   Modal.error({
-//     centered: true,
-//     title: "Error",
-//     content: "No active account found with the given credentials",
-//   });
-// });

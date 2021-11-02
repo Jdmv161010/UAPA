@@ -2,10 +2,10 @@ import * as actionTypes from "../types/types";
 
 const initialState = {
   Homeworks:[],
-  // HomeworksNew:[]
+  HomeworksNew:[],
+  Courses:[],
+  Indicators:[]
 };
-
-
 
 export const aesciReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -15,19 +15,28 @@ export const aesciReducer = (state = initialState, action) => {
         ...state,
         Homeworks: action.payload,
       };
-      break;
     // case actionTypes.GET_HOMEWORKSINFO:
     //   return {
     //     ...state,
     //     Homeworks: action.payload
     //   };
-    //   break;
-    // case actionTypes.POST_HOMEWORKS:
-    //   return {
-    //     ...state,
-    //     HomeworksNew: action.payload,
-    //   };
-    //   break;
+      // break;
+    case actionTypes.POST_HOMEWORKS:
+      return {
+        ...state,
+        HomeworksNew: action.payload,
+      };
+    case actionTypes.GET_COURSES:
+      return {
+        ...state,
+        Courses: action.payload,
+      }; 
+    case actionTypes.GET_INDICATORS:
+      return {
+        ...state,
+        Indicators: action.payload,
+      };   
+      break;
 
     default:
       return state;

@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomeworkPicker.css";
 import {
     Link,
     Route,
-    useHistory,
     useRouteMatch,
     Switch,
   } from "react-router-dom";
-import { publicRoutes } from "../../../../router/routes";
 import StudentOutcomes from "../Student-outcomes/Student-outcomes";
+import { getCoursesData } from "../../../../store/actions/aesciActions";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
 export default function HomeworkPicker() {
     
     const { url, path } = useRouteMatch();
-    
+    const dispatch = useDispatch();
+    const {Courses} = useSelector(state => state.aesci);
+
+
+    useEffect(() => {
+        dispatch(getCoursesData());
+        
+    }, [])
+        
     return (
         <React.Fragment>
         <Switch>
@@ -36,8 +44,12 @@ export default function HomeworkPicker() {
                             <label for="Materias"> </label> 
                             <select nameclass="Materias">
                                 <option disabled="">Select the matter</option>
-                                <option value="Uno">uapapp_fibog</option>
-                                <option value="Dos">Programacion 1</option>
+                                    {
+                                        Courses.map((c,index)=>(
+                                            <option value={index+1} key={index}>{c.nameCourse}</option>
+                                        )
+                                        )
+                                    }
                                 
                             </select>
     

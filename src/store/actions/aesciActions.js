@@ -1,6 +1,4 @@
 import Axios from "axios";
-import { useHistory } from "react-router-dom";
-import { isJSDocSeeTag } from "typescript";
 import * as actionTypes from "../types/types";
 
 const UrlBase = "http://localhost:8000";
@@ -32,16 +30,13 @@ export const getHomeworksData = (username) => {
     };
 };
 
-// const getHomeworksInfo = (data) => ({
-//     type: actionTypes.GET_HOMEWORKSINFO,
-//     payload: data,
-// });
+
 
 // export const getHomeworksInfo = (id) => {
 //     console.log(id)
 //     return async (dispatch) => {
 //         try {
-//             const respt = await Axios.get(`${UrlBase}/assignmentstudents`,
+//             const respt = await Axios.get(`${UrlBase}/assignments/10`,
 //                 {
                     
                     
@@ -50,34 +45,91 @@ export const getHomeworksData = (username) => {
 //             const {data} = respt
             
 //             console.log(data)
-//             dispatch();
+//             dispatch(getHomeworksInfo(data));
 //         } catch (error) {
 //             console.log(error);
 //         }
 //     };
 // };
 
-// const NewTarea = (data) => ({
-//     type: actionTypes.POST_HOMEWORKS,
-//     payload: data,
-//   });
+const NewTarea = (data) => ({
+    type: actionTypes.POST_HOMEWORKS,
+    payload: data,
+  });
   
-//   export const StartNewtarea = (nameAssignment, description, username, numGroup) => {
+  export const StartNewtarea = (dataTarea) => {
+    const {nameAssignment, description, numGroup} = dataTarea
     
-//     console.log(nameAssignment, description, username, numGroup)
-//     return async (dispatch) => {
-//       try {
-//         const { data } = await Axios.post(`${UrlBase}/assignments/`, {
-//           nameAssignment,
-//           description, 
-//           username, 
-//           numGroup
+    return async (dispatch, getState) => {
+      try {
+        const {access, username}= getState().auth.responseLogin
+          console.log(access)
+          const config = {
+            headers: { Authorization: `Bearer ${access}`,"Content-Type":"application/json","Accept":"*/*" }
+          };
+        const { data } = await Axios.post(`${UrlBase}/assignments/`, {
+          nameAssignment,
+          description, 
+          username:"dfzunigah", 
+          numGroup:Number(numGroup)
           
-//         });
-         
-//          dispatch(NewTarea(data));
-//       } catch (error) {
-//         console.log(error);
-//       }
-//     };
-//   };
+        } ,config
+        );
+         console.log(data)
+        //  dispatch(NewTarea(data));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  };
+
+  const getCourses = (data) => ({
+    type: actionTypes.GET_COURSES,
+    payload: data,
+});
+
+export const getCoursesData = () => {
+   
+    return async (dispatch, getState) => {
+        try {
+          const {access}= getState().auth.responseLogin
+          console.log(access)
+          const config = {
+            headers: { Authorization: `Bearer ${access}` }
+          };
+          const respt = await Axios.get(`${UrlBase}/courses`,
+                
+                config
+            );
+            const {data} = respt
+            
+            console.log(data)
+            dispatch(getCourses(data));
+        } catch (error) {
+            console.log(error);
+        }
+    };
+};
+
+const getIndicators = (data) => ({
+  type: actionTypes.GET_INDICATORS,
+  payload: data,
+});
+
+export const getIndicatorsData = () => {
+ 
+  return async (dispatch, getState) => {
+      try {
+        const respt = await Axios.get(`${UrlBase}/indicatorassignments`,
+              
+              
+          );
+          const {data} = respt
+          
+          console.log(data)
+          dispatch(getIndicators(data));
+      } catch (error) {
+          console.log(error);
+      }
+  };
+};

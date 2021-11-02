@@ -2,7 +2,7 @@ import React from "react";
 import "./StudentOutcomesStu.css";
 import sIcon2 from "../../../assets/images/menuSt2.png";
 import { Card2 } from "../../Utils/Card copy/Card";
-import {Upload, Button} from 'antd';
+import {Upload} from 'antd';
 import Select from 'react-select';
 import { colourOptions } from './data.ts';
 

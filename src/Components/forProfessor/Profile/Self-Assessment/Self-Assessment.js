@@ -3,12 +3,11 @@ import pIcon5 from "../../../../assets/images/reviewPr5.png";
 import pIcon6 from "../../../../assets/images/reviewPr6.png";
 import pIcon7 from "../../../../assets/images/reviewPr7.png";
 import "./Self-Assessment.css";
-import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
-//import { Card } from "../../Utils/Card/Card";
-//import { MainTemplate } from "../../Utils/MainTemplate/MainTemplate";
+
+
 
 export const Assessments = ({ listAssessments }) => {
-  const { url, path } = useRouteMatch();
+
 
   return (
 
