@@ -24,3 +24,18 @@ export const StartAuthLogin = (username, password) => {
     }
   };
 };
+
+
+// export const startLogout = () => {
+//   return async( dispatch ) => {
+//       await Axios.auth().signOut();
+
+//       dispatch( logout() );
+      
+//   }
+// }
+
+
+// export const logout = () => ({
+//   type: actionTypes.logout
+// })

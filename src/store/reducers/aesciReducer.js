@@ -2,6 +2,7 @@ import * as actionTypes from "../types/types";
 
 const initialState = {
   Homeworks:[],
+  HomeworksInfo:[],
   HomeworksNew:[],
   Courses:[],
   Indicators:[]
@@ -15,12 +16,11 @@ export const aesciReducer = (state = initialState, action) => {
         ...state,
         Homeworks: action.payload,
       };
-    // case actionTypes.GET_HOMEWORKSINFO:
-    //   return {
-    //     ...state,
-    //     Homeworks: action.payload
-    //   };
-      // break;
+    case actionTypes.GET_HOMEWORKSINFO:
+      return {
+        ...state,
+        HomeworksInfo: action.payload
+      };
     case actionTypes.POST_HOMEWORKS:
       return {
         ...state,

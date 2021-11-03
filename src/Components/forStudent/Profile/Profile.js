@@ -10,7 +10,6 @@ import {
 import sIcon1 from "../../../assets/images/menuSt1-gray.png";
 import sIcon2 from "../../../assets/images/menuSt2.png";
 import sIcon3 from "../../../assets/images/menuSt3.png";
-import { MainTemplate } from "../../Utils/MainTemplate/MainTemplate";
 import { Homeworks } from "../Homeworks/Homeworks";
 import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./StudentProfile.css";
@@ -30,16 +29,15 @@ export const StudentProfile = () => {
     
   ];
 
-const state = useSelector(state => state.aesci.Homeworks)
-
-
-  
+  const state = useSelector(state => state.aesci.Homeworks)
   const { url, path } = useRouteMatch();
   const dispatch = useDispatch()
   
   const handleGetHomeworks = () => {
-    dispatch(getHomeworksData("Jose"))
+    dispatch(getHomeworksData("Jose"));
   }
+  
+  
 
   return (
     <React.Fragment>

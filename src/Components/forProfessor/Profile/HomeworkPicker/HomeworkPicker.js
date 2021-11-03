@@ -7,7 +7,7 @@ import {
     Switch,
   } from "react-router-dom";
 import StudentOutcomes from "../Student-outcomes/Student-outcomes";
-import { getCoursesData } from "../../../../store/actions/aesciActions";
+import { getCoursesData, getHomeworksData } from "../../../../store/actions/aesciActions";
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -17,10 +17,12 @@ export default function HomeworkPicker() {
     const { url, path } = useRouteMatch();
     const dispatch = useDispatch();
     const {Courses} = useSelector(state => state.aesci);
+    const {homework} = useSelector(state => state.aesci.Homeworks)
 
 
     useEffect(() => {
         dispatch(getCoursesData());
+        dispatch(getHomeworksData("Jose"))
         
     }, [])
         
@@ -63,9 +65,13 @@ export default function HomeworkPicker() {
                         
                         <label for="Name"> </label> 
                             <select nameclass="Name">
-                                <option disabled="">Select the homework</option>
-                                <option value="UNO">Tarea 1</option>
-                                <option value="DOS">Tarea 2</option>
+                            <option disabled="">Select the Homework</option>
+                                    {
+                                        homework.map((H,index)=>(
+                                            <option value={index+1} key={index}>{H.id}</option>
+                                        )
+                                        )
+                                    }
                                 
                             </select>
         

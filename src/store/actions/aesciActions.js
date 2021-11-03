@@ -31,26 +31,32 @@ export const getHomeworksData = (username) => {
 };
 
 
+const getHomeworksI = (data) => ({
+  type: actionTypes.GET_HOMEWORKSINFO,
+  payload: data,
+});
 
-// export const getHomeworksInfo = (id) => {
-//     console.log(id)
-//     return async (dispatch) => {
-//         try {
-//             const respt = await Axios.get(`${UrlBase}/assignments/10`,
-//                 {
+export const getHomeworksInfo = (data) => {
+    console.log(data)
+    return async (dispatch, id) => {
+        try {
+            const respt = await Axios.get(`${UrlBase}/assignments?id&username`,
+                {
+                  params:{
+                    id: id,
+                    }
                     
-                    
-//                 }
-//             );
-//             const {data} = respt
+                }
+            );
+            const {data} = respt
             
-//             console.log(data)
-//             dispatch(getHomeworksInfo(data));
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     };
-// };
+            console.log(data)
+            // dispatch(getHomeworksI(data));
+        } catch (error) {
+            console.log(error);
+        }
+    };
+};
 
 const NewTarea = (data) => ({
     type: actionTypes.POST_HOMEWORKS,

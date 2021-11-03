@@ -20,9 +20,18 @@ import iconAccesibility from './../../assets/images/access-icon.png';
 import iconAccesibilityBlue from './../../assets/images/access-icon.jpg';
 //Ant Design
 import { Button } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
+import { startLogout } from '../../store/actions/authActions';
 
 
 function Header() {
+
+    // const dispatch = useDispatch();
+    
+
+    // const hanleLogout = () => {
+    //     dispatch( startLogout() )
+    // }
 
     const htmlElement = document.querySelector('html');
 
@@ -210,6 +219,14 @@ function Header() {
                         <li className="Header-dropdown">
                             <Button type="link" href="https://ingenieria.bogota.unal.edu.co/es/dependencias/vicedecanatura-academica/autoevaluacion-y-acreditacion.html" style={{color: "white"}}>Who we are</Button>
                         </li>
+                        {/* <li className="Header-dropdown">
+                        <button 
+                            className="btn"
+                            onClick={hanleLogout}
+                        >
+                            Logout
+                        </button>
+                        </li> */}
                     </ul>
                     <div className="Header-dropdown">
                         <button className="Header-dropdown__button"

@@ -9,13 +9,7 @@ import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./Homeworks.css";
 
 
-// const state = useSelector(state => state.aesci.Homeworks)
 
-// const dispatch = useDispatch()
-
-// const handleGetHomeworksInfo = () => {
-//   dispatch(getHomeworksInfo())
-// }
 
 
 export const Homeworks = ({ listHomeworks }) => {

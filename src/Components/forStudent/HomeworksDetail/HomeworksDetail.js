@@ -3,11 +3,22 @@ import sIcon2 from "../../../assets/images/menuSt2.png";
 import {Card} from "../../Utils/Card/Card"
 import "./HomeworksDetail.css";
 import {Upload} from 'antd';
+import { useDispatch, useSelector } from "react-redux";
+import { getHomeworksInfo } from "../../../store/actions/aesciActions";
 
 
 
 
 export const HomeworksDetail = ({ homework }) => {
+
+  const {tareainfo} = useSelector(state => state.aesci.HomeworksInfo)
+  console.log(tareainfo)
+  const dispatch = useDispatch()
+  
+  const handleGetHomeworksInfo=()=>{
+    dispatch(getHomeworksInfo());
+
+  }
   return (
     <div className="custom-container-s">
       <div className="custom-content-s">
@@ -26,7 +37,7 @@ export const HomeworksDetail = ({ homework }) => {
         >
           <Card
             img={sIcon2}
-            // title={homework.title}
+            // title={tareainfo.nameAssignment}
             title={`Add "Nuevo"`}
             width="100%"
           />
