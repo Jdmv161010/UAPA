@@ -73,7 +73,7 @@ export const StudentProfile = () => {
               </div>
               <span>
                 <Link to={`${url}/`}>
-                  Asses another
+                  Assess another
                   <br />
                   student
                 </Link>
