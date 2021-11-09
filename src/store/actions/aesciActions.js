@@ -36,22 +36,29 @@ const getHomeworksI = (data) => ({
   payload: data,
 });
 
-export const getHomeworksInfo = (data) => {
-    console.log(data)
-    return async (dispatch, id) => {
+export const getHomeworksInfo = (dataHomeworksInfo) => {
+    console.log(dataHomeworksInfo)
+    return async (dispatch, getState) => {
         try {
-            const respt = await Axios.get(`${UrlBase}/assignments?id&username`,
-                {
-                  params:{
-                    id: id,
-                    }
-                    
-                }
+            const {access, username}= getState().auth.responseLogin
+            console.log(access)
+            const config = {
+              headers: { Authorization: `Bearer ${access}`,"Content-Type":"application/json","Accept":"*/*" }
+            };
+            const respt = await Axios.get(`${UrlBase}/assignments/${dataHomeworksInfo.id}/?username`,
+            config,    
+            // {
+            //       params:{
+            //            username: username, 
+            //         }
+                  
+            //     }
+              
             );
             const {data} = respt
             
             console.log(data)
-            // dispatch(getHomeworksI(data));
+            dispatch(getHomeworksI(data));
         } catch (error) {
             console.log(error);
         }

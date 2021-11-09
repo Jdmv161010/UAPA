@@ -23,19 +23,19 @@ import { getHomeworksData } from "../../../store/actions/aesciActions";
 
 
 export const StudentProfile = () => {
-  const homeworks = [
-    { title: `Add "Nuevo"` },
-    { title: `Add "Dio"` },
-    
-  ];
-
+  
+  const usuario = useSelector(state => state.auth.responseLogin)
   const state = useSelector(state => state.aesci.Homeworks)
   const { url, path } = useRouteMatch();
   const dispatch = useDispatch()
   
   const handleGetHomeworks = () => {
+    // dispatch(getHomeworksData(usuario.username));
     dispatch(getHomeworksData("Jose"));
+    
+
   }
+  
   
   
 

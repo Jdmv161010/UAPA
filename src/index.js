@@ -20,12 +20,13 @@ import BreadCrumb from "./layouts/Breadcrumbper/Breadcrumb";
 import { publicRoutes } from "./router/routes";
 //Styles
 import "./styles/styles.scss";
+import App from "./App";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      isLogged() ? <Component {...props} /> : <Redirect to="/" />
+      isLogged() ? <Component {...props} /> : <Redirect to="/home" />
     }
   />
 );
@@ -52,7 +53,7 @@ ReactDOM.render(
             {publicRoutes.map(({ path, Component }, i) => (
               <PublicRoute exact path={path} key={i} component={Component} />
             ))}
-            {/*<PrivateRoute exact path="/home" component={Test}/>*/}
+            <PrivateRoute exact path="/home" component={Test}/>
             <Route
               path="/profile/student"
               render={(props) => <Profile {...props} role="student" />}

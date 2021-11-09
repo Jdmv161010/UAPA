@@ -8,7 +8,6 @@ export const publicRoutes = [
     {path: "/", name: "Inicio", Component: Home},
     {path: "/login", name: "Iniciar sesión", Component: Login},
     {path: "/StudentAssesment", name: "Student Assesment", Component: StudentOutcomes},
-    
     {path: "/login/subitem", name: "subitem :3", Component: AsideNavServices},
 ];
 

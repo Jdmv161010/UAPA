@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
 import sIcon2 from "../../../assets/images/menuSt2.png";
@@ -9,11 +9,21 @@ import { HomeworksDetail } from "../HomeworksDetail/HomeworksDetail";
 import "./Homeworks.css";
 
 
-
-
-
 export const Homeworks = ({ listHomeworks }) => {
   const { url, path } = useRouteMatch();
+  // const idAssignment = useSelector(state => state.aesci)
+  const state = useSelector(state => state.aesci.HomeworksInfo)
+  
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   dispatch(getHomeworksInfo({id:26}));
+  //   console.log(listHomeworks)
+    
+  // }, [])
+  
+  
+  
+
 
   return (
     <div>
@@ -35,7 +45,7 @@ export const Homeworks = ({ listHomeworks }) => {
         </Route>
         <Route path={`${url}/homeworks`}>
           <MainTemplate
-            title={`Add "Nuevo"`}
+            title={state?.nameAssignment}
           >
             <HomeworksDetail homework={listHomeworks} />
           </MainTemplate>

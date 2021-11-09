@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import sIcon2 from "../../../assets/images/menuSt2.png";
 import {Card} from "../../Utils/Card/Card"
 import "./HomeworksDetail.css";
@@ -9,22 +9,24 @@ import { getHomeworksInfo } from "../../../store/actions/aesciActions";
 
 
 
+
 export const HomeworksDetail = ({ homework }) => {
-
-  const {tareainfo} = useSelector(state => state.aesci.HomeworksInfo)
-  console.log(tareainfo)
+  console.log(homework)
   const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getHomeworksInfo({id:26}));
+    
+  }, [])
   
-  const handleGetHomeworksInfo=()=>{
-    dispatch(getHomeworksInfo());
+  const state = useSelector(state => state.aesci.HomeworksInfo)
+  
 
-  }
   return (
     <div className="custom-container-s">
       <div className="custom-content-s">
         <span className="custom-span-s">
           {/* {homework.detail} */}
-          La última
+        {state?.description}
         </span>
       </div>
 

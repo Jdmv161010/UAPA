@@ -65,13 +65,13 @@ export default function HomeworkPicker() {
                         
                         <label for="Name"> </label> 
                             <select nameclass="Name">
-                            <option disabled="">Select the Homework</option>
+                            {/* <option disabled="">Select the Homework</option>
                                     {
                                         homework.map((H,index)=>(
                                             <option value={index+1} key={index}>{H.id}</option>
                                         )
                                         )
-                                    }
+                                    } */}
                                 
                             </select>
         

@@ -1,0 +1,21 @@
+.contUserLog{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: gray !important;
+    border-radius: 10px;
+    align-items: center;
+    width: 250px;
+}
+
+.contUserLog2{
+    /* background-color: blueviolet; */
+    align-items: flex-start;
+    width: 200px;
+}
+
+.contUserLog3{
+    background-color:rgb(7, 7, 109);
+    align-items: center;
+    border-radius: 10px;
+}

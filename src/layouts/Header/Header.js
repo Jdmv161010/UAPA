@@ -21,17 +21,19 @@ import iconAccesibilityBlue from './../../assets/images/access-icon.jpg';
 //Ant Design
 import { Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { startLogout } from '../../store/actions/authActions';
+import { logout } from '../../store/actions/authActions';
+import "./Header.css"
+
 
 
 function Header() {
 
-    // const dispatch = useDispatch();
-    
+    const dispatch = useDispatch();
+    const usuario = useSelector(state => state.auth.responseLogin)    
 
-    // const hanleLogout = () => {
-    //     dispatch( startLogout() )
-    // }
+    const hanleLogout = () => {
+        dispatch( logout() )
+    }
 
     const htmlElement = document.querySelector('html');
 
@@ -219,15 +221,25 @@ function Header() {
                         <li className="Header-dropdown">
                             <Button type="link" href="https://ingenieria.bogota.unal.edu.co/es/dependencias/vicedecanatura-academica/autoevaluacion-y-acreditacion.html" style={{color: "white"}}>Who we are</Button>
                         </li>
-                        {/* <li className="Header-dropdown">
-                        <button 
-                            className="btn"
-                            onClick={hanleLogout}
-                        >
-                            Logout
-                        </button>
-                        </li> */}
+                        <div className="contUserLog">
+                        <div className="contUserLog2">
+                            <span style={{color: "white"}}> user: { usuario.username }
+                            </span>
+                        </div>
+                        <div className="contUserLog3">
+                        <li className="Header-dropdown">
+                            <Button type="link" href="/" style={{color: "white"}}
+                                className="btn"
+                                onClick={hanleLogout}
+                            >
+                                Logout
+                            </Button>
+                        </li>
+                        </div>
+
+                        </div>
                     </ul>
+                    
                     <div className="Header-dropdown">
                         <button className="Header-dropdown__button"
                                 onClick={(e) => toggleDropdown(e)}>SEDES
